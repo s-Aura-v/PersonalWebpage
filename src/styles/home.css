@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-family: "Baskerville", sans-serif;
+
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+.tabs > ul > li {
+    display: inline;
+    width: fit-content;
+    text-decoration: none;
+    justify-content: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.tabs > ul > li:hover {
+    background-color: black;
+    color: white;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-top: 1.5rem;
+}
+
+.home-grid > ul > li:hover {
+    background-color: black;
+    color: white;
+}
+
+.name-tag {
+    font-size: 5rem;
+    /* writing-mode: vertical-rl; */
+    font-family: "JetBrains Mono", math;
+    background: linear-gradient(to left, white, black, white );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer {
+    background-color: skyblue;
+    height: 50px;
+    font-size: 1.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", math, sans-serif;
+}
+
+.demo-slider {
+    width: 80%;
+    margin: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: red!important;;
+}
+

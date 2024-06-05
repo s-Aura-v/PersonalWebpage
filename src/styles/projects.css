@@ -1,0 +1,33 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 30dvw);
+    grid-auto-rows: 500px;
+    column-gap: 40px;
+    row-gap: 20px;
+    flex-grow: .6;
+}
+
+.left-info {
+    display: flex;
+    flex-grow: .4;
+    margin-right: 4rem;
+
+    border: black 1px solid;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: whitesmoke;
+    height: 100%;
+}
+
+.MuiCard-root {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.MuiCard-root:hover {
+    transform: scale(1.1);
+}
