@@ -1,7 +1,13 @@
+import {useNavigate} from "react-router-dom";
+
 export function NavBar() {
+    const navigate = useNavigate();
+    const redirectHome = () =>{
+        navigate("/");
+    }
     return (
         <>
-            <h1 className="name-tag">S-aura-v</h1>
+            <h1 className="name-tag" onClick={redirectHome}>S-aura-v</h1>
             <div className="tabs">
                 <ul>
                     <li>Item1</li>

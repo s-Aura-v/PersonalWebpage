@@ -1,6 +1,6 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 30dvw);
+    grid-template-columns: repeat(2, 30vw);
     grid-auto-rows: 500px;
     column-gap: 40px;
     row-gap: 20px;
@@ -30,4 +30,14 @@
 
 .MuiCard-root:hover {
     transform: scale(1.1);
+}
+
+.demo-slider {
+    width: 80%;
+    margin: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: red!important;;
 }

@@ -13,7 +13,7 @@
 * {
     margin: 0;
     font-family: "Baskerville", sans-serif;
-
+    /*border: black 1px solid;*/
 }
 
 body {
@@ -76,9 +76,13 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 5rem;
     /* writing-mode: vertical-rl; */
     font-family: "JetBrains Mono", math;
-    background: linear-gradient(to left, white, black, white );
+    background: linear-gradient(to left, white, black, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.name-tag:hover {
+    transform: skewY(-.1rad);
 }
 
 .footer {
@@ -91,13 +95,16 @@ p, h1, h2, h3, h4, h5, h6 {
     font-family: "JetBrains Mono", math, sans-serif;
 }
 
-.demo-slider {
-    width: 80%;
-    margin: auto;
+.external-links {
+    display: grid;
+    grid-template-columns: repeat(4, 4rem);
+    justify-content: center;
+    border: black 1px solid;
+    margin: 1dvw;
+    column-gap: 2dvw;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    color: red!important;;
-}
 
+.external-links > div:hover {
+    transform: scale(1.2);
+}
