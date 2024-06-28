@@ -45,6 +45,13 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     height: 100dvh;
     width: 100dvw;
+
+}
+
+.tabs-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .tabs > ul > li {
@@ -64,6 +71,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .home-content {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-grow: 1;
     margin-top: 1.5rem;
 }
@@ -81,7 +89,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .name-tag {
     font-size: 5rem;
-    /* writing-mode: vertical-rl; */
+     /*writing-mode: vertical-rl;*/
     font-family: "JetBrains Mono", math;
     background: linear-gradient(to left, white, black, white);
     -webkit-background-clip: text;
@@ -120,3 +128,4 @@ p, h1, h2, h3, h4, h5, h6 {
     background-size: 20px 30px;
     viewBox: 0 0 100 100;
 }
+

@@ -9,7 +9,7 @@ export function NavBar() {
         <>
             <div className="name-tag" onClick={redirectHome}>s-Aura-v</div>
             <div className="tabs">
-                <ul>
+                <ul className="tabs-list">
                     <li>Item1</li>
                     <li><a href="/projects">PROJECTS</a></li>
                     <li>Item2</li>

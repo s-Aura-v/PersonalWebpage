@@ -1,0 +1,16 @@
+.content-media {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em 1em 0;
+}
+
+.content-media > figure > img {
+    width: 480px;
+    height: 270px;
+    margin-top: .5em;
+}
+
+.content-text {
+    display: flex;
+    flex-grow: 1;
+}
