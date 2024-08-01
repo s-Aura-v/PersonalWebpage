@@ -9,7 +9,7 @@ import { useEffect, useRef, useCallback } from "react";
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import * as THREE from 'three';
 
-export function Home() {
+export function Hobbies() {
 
     return (
         <>
@@ -20,7 +20,6 @@ export function Home() {
                 <div className="home-content">
                     <canvas className="cube" ></canvas>
                 </div>
-
 
                 <Footer/>
             </div>

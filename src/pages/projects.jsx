@@ -4,10 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {NavBar} from "../components/NavBar.jsx";
 import {Footer} from "../components/Footer.jsx";
-import {Card, Container} from "@mui/material";
-import Slider from "react-slick";
 import {YelpRecommendation} from "../components/YelpRecommendation.jsx";
 import {useState} from "react";
+import YelpLogo from "../assets/whereabouts.svg"
+import FamilyThreadLogo from "../assets/familythread.svg"
+
 
 
 export function Projects() {
@@ -40,30 +41,87 @@ export function Projects() {
     };
 
 
-
     return (
         <>
             <div className="homepage">
                 <NavBar/>
-                <Container className="projects-container">
+                <div className="projects-container">
                     <div className="projects-grid">
-                        <div className="projects-name" onClick={() => setProject(0)}>
-                            Yelp Recommendation
+                        <div className="projects-info" onClick={() => setProject(0)}>
+                            <div className="logo">
+                                <img src={YelpLogo} className="imgLogo"/>
+                            </div>
+                            <div className="text">
+                                Yelp Recommendation
+                            </div>
+                            <div>
+                                Information
+                            </div>
                         </div>
-                        <div className="projects-name" onClick={() => setProject(1)}>
-                            Family Thread Website
+                        <div className="projects-info" style={{backgroundColor: "whitesmoke"}}
+                             onClick={() => setProject(0)}>
+                            <div className="logo">
+                                <img src={FamilyThreadLogo} className="imgLogo"/>
+                            </div>
+                            <div className="text">
+                                Family Thread
+                            </div>
+                            <div>
+                                Information
+                            </div>
                         </div>
-                        <div className="projects-name" onClick={() => setProject(2)}>
-                            N/A
+                        <div className="projects-info" onClick={() => setProject(0)}>
+                            <div className="logo">
+                                <img src={YelpLogo} className="imgLogo"/>
+                            </div>
+                            <div className="text">
+                                Yelp Recommendation
+                            </div>
+                            <div>
+                                Information
+                            </div>
                         </div>
-                        <div className="projects-name" onClick={() => setProject(3)}>
-                            N/A
+                        <div className="projects-info" onClick={() => setProject(0)}>
+                            <div className="logo">
+                                <img src={YelpLogo} className="imgLogo"/>
+                            </div>
+                            <div className="text">
+                                Yelp Recommendation
+                            </div>
+                            <div>
+                                Information
+                            </div>
                         </div>
+                        <div className="projects-info" style={{backgroundColor: "whitesmoke"}}
+                             onClick={() => setProject(0)}>
+                            <div className="logo">
+                                <img src={FamilyThreadLogo} className="imgLogo"/>
+                            </div>
+                            <div className="text">
+                                Family Thread
+                            </div>
+                            <div>
+                                Information
+                            </div>
+                        </div>
+                        <div className="projects-info" onClick={() => setProject(0)}>
+                            <div className="logo">
+                                <img src={YelpLogo} className="imgLogo"/>
+                            </div>
+                            <div className="text">
+                                Yelp Recommendation
+                            </div>
+                            <div>
+                                Information
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div className="projects-content">
-                        {displayProject()}
-                    </div>
-                </Container>
+                    {/*<div className="projects-content">*/}
+                    {/*    {displayProject()}*/}
+                    {/*</div>*/}
+                </div>
 
                 <Footer/>
             </div>

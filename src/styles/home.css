@@ -17,6 +17,10 @@
     /*border: black 1px solid;*/
 }
 
+/*body, html {*/
+/*    overflow: hidden;*/
+/*}*/
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -39,13 +43,18 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .homepage {
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 100dvh;
     width: 100dvw;
-
 }
 
 .tabs-list {
@@ -94,6 +103,7 @@ p, h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(to left, white, black, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: fit-content;
 }
 
 .name-tag:hover {
