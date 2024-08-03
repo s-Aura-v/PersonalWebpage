@@ -10,7 +10,6 @@ import YelpLogo from "../assets/whereabouts.svg"
 import FamilyThreadLogo from "../assets/familythread.svg"
 
 
-
 export function Projects() {
     const [projectType, setProjectType] = useState(0);
 
@@ -44,88 +43,32 @@ export function Projects() {
     return (
         <>
             <div className="homepage">
+
                 <NavBar/>
-                <div className="projects-container">
-                    <div className="projects-grid">
-                        <div className="projects-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
+                <br/>
+                <span> project overview </span>
+                <div className="projects">
+                    <div className="projects-container">
+                        <div className="project-title"> Yelp Recommendation</div>
+                        <div className="project-cell">
+                            <div className="cell-left">
+                                <h2></h2>
                             </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="projects-info" style={{backgroundColor: "whitesmoke"}}
-                             onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={FamilyThreadLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Family Thread
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="projects-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="projects-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="projects-info" style={{backgroundColor: "whitesmoke"}}
-                             onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={FamilyThreadLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Family Thread
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="projects-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
+                            <div className="cell-center">Yelp Recommendation is a tool that can be used to find similar business and find the shortest path between them.</div>
+                            <div className="cell-right">h1</div>
                         </div>
 
-
+                        <div className="project-title"> Family Thread</div>
+                        <div className="project-cell">
+                            <div className="cell-left">Tools Used</div>
+                            <div className="cell-center">Family Thread is a website that can be used to create family trees.</div>
+                            <div className="cell-right">Gallery</div>
+                        </div>
                     </div>
-                    {/*<div className="projects-content">*/}
-                    {/*    {displayProject()}*/}
-                    {/*</div>*/}
                 </div>
-
                 <Footer/>
             </div>
         </>
-    )
+    );
 
 }

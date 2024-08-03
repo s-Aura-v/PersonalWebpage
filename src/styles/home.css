@@ -100,10 +100,10 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 5rem;
      /*writing-mode: vertical-rl;*/
     font-family: "JetBrains Mono", math;
-    background: linear-gradient(to left, white, black, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: fit-content;
+    /*background: linear-gradient(to left, white, black, white);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    /*width: fit-content;*/
 }
 
 .name-tag:hover {
@@ -137,5 +137,10 @@ p, h1, h2, h3, h4, h5, h6 {
 .external-links > div > a > img {
     background-size: 20px 30px;
     viewBox: 0 0 100 100;
+}
+
+.logo-sizes {
+    height: 70%;
+    width: 70%;
 }
 

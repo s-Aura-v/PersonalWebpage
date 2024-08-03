@@ -1,4 +1,3 @@
-import '../styles/project.css'
 export function YelpRecommendation() {
     return (
         <>

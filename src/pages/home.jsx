@@ -18,7 +18,7 @@ export function Home() {
                 <NavBar/>
 
                 <div className="home-content">
-                    <canvas className="cube" ></canvas>
+                    <p>this is still a wip</p>
                 </div>
 
 
