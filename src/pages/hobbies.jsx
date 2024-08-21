@@ -17,27 +17,6 @@ export function Hobbies() {
         setProjectType(type);
     }
 
-    function displayProject() {
-        switch (projectType) {
-            case 0:
-                return <YelpRecommendation/>;
-            case "403":
-                return null;
-            case "404":
-                return <div>Page Not Found</div>;
-            default:
-                return <div>Unknown Error</div>;
-        }
-    }
-
-    const settings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true
-    };
 
 
     return (
@@ -75,11 +54,8 @@ export function Hobbies() {
 
                         </div>
 
-
                     </div>
-                    {/*<div className="projects-content">*/}
-                    {/*    {displayProject()}*/}
-                    {/*</div>*/}
+
                 </div>
 
                 <Footer/>

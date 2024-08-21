@@ -7,8 +7,8 @@
 
 .proj-container {
     display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-rows: repeat(auto-fit, 300px);
 }
 
 .proj-cell {
@@ -27,4 +27,9 @@
 .proj-logo {
     height: 160px;
     width: 160px;
+}
+
+.popup-title {
+    display: flex;
+    justify-content: center;
 }
