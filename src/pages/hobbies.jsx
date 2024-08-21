@@ -10,7 +10,6 @@ import YelpLogo from "../assets/whereabouts.svg"
 import FamilyThreadLogo from "../assets/familythread.svg"
 
 
-
 export function Hobbies() {
     const [projectType, setProjectType] = useState(0);
 
@@ -47,91 +46,34 @@ export function Hobbies() {
                 <NavBar/>
                 <div className="hobbies-tabs">
                     <span> Food </span>
-                    <span> hi </span>
-                    <span> Galley </span>
+                    <span>  </span>
+                    <span> Gallery </span>
                 </div>
                 <div className="hobbies-container">
                     <div className="hobbies-grid">
                         <div className="hobbies-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/McDonald%27s_Golden_Arches.svg" className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                McDonalds
-                            </div>
-                            <div>
-                                Fastfood <br/>
-                            </div>
-                        </div>
-                        <div className="hobbies-info" style={{backgroundColor: "whitesmoke"}}
-                             onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src="https://toppng.com/uploads/preview/wendys-logo-vector-11573937109po7rpvlsr1.png" className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Wendys
-                            </div>
-                            <div>
-                                Information
-                            </div>
+                            <img src="https://shorturl.at/ntK8I" alt="logo" className="food-logo" />
+                            <span> Wendy's </span>
                         </div>
                         <div className="hobbies-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
+                            <img src="https://shorturl.at/sj4E3" alt="logo" className="food-logo"/>
+                            <span> McDonald's </span>
                         </div>
                         <div className="hobbies-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="hobbies-info" style={{backgroundColor: "whitesmoke"}}
-                             onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={FamilyThreadLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Family Thread
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-                            <div className="logo">
-                                <img src={YelpLogo} className="imgLogo"/>
-                            </div>
-                            <div className="text">
-                                Yelp Recommendation
-                            </div>
-                            <div>
-                                Information
-                            </div>
-                        </div>
 
+                        </div>
+                        <div className="hobbies-info" onClick={() => setProject(0)}>
+
+                        </div>
+                        <div className="hobbies-info" onClick={() => setProject(0)}>
+
+                        </div>
+                        <div className="hobbies-info" onClick={() => setProject(0)}>
+
+                        </div>
+                        <div className="hobbies-info" onClick={() => setProject(0)}>
+
+                        </div>
 
 
                     </div>

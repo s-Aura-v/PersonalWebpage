@@ -31,6 +31,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-size: 1.4rem;
     padding: 1rem 0;
 }
@@ -45,9 +46,10 @@
     margin: 3rem 0;
 }
 
-.imgLogo {
-    height: 100%;
-    width: 100%;
+.food-logo {
+    height: 70px;
+    width: 70px;
+    border:black 1px solid;
 }
 
 .MuiCard-root {
@@ -69,7 +71,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     justify-content: center;
-
 }
 
 .hobbies-tabs > span {
