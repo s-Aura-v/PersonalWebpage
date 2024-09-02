@@ -8,6 +8,9 @@ import {YelpRecommendation} from "../components/YelpRecommendation.jsx";
 import {useState} from "react";
 import YelpLogo from "../assets/whereabouts.svg"
 import FamilyThreadLogo from "../assets/familythread.svg"
+import {FoodReviews} from "../components/FoodReviews.jsx";
+import {Gallery} from "../components/Gallery.jsx";
+import {Recipes} from "../components/Recipes.jsx";
 
 
 export function Hobbies() {
@@ -17,6 +20,18 @@ export function Hobbies() {
         setProjectType(type);
     }
 
+    function displayProject() {
+        switch (projectType) {
+            case 0:
+                return <FoodReviews />;
+            case 1:
+                return <Gallery />;
+            case 2:
+                return <Recipes />;
+        }
+
+    }
+
 
 
     return (
@@ -24,39 +39,15 @@ export function Hobbies() {
             <div className="homepage">
                 <NavBar/>
                 <div className="hobbies-tabs">
-                    <span> Food </span>
-                    <span>  </span>
-                    <span> Gallery </span>
+                    <button onClick={() => setProject(0)}> Food </button>
+                    <button onClick={() => setProject(2)}> Cooking  </button>
+                    <button onClick={() => setProject(1)}> Gallery </button>
                 </div>
                 <div className="hobbies-container">
-                    <div className="hobbies-grid">
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-                            <img src="https://shorturl.at/ntK8I" alt="logo" className="food-logo" />
-                            <span> Wendy's </span>
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-                            <img src="https://shorturl.at/sj4E3" alt="logo" className="food-logo"/>
-                            <span> McDonald's </span>
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-
-                        </div>
-                        <div className="hobbies-info" onClick={() => setProject(0)}>
-
-                        </div>
-
-                    </div>
-
+                    {displayProject()}
                 </div>
+
+
 
                 <Footer/>
             </div>
