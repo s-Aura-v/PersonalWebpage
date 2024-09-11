@@ -169,6 +169,93 @@ export function Recipes() {
                         </div>
                     </div>
                 </div>
+                <div>
+                    <h2>Crushed Potatoes</h2>
+                    <div className="ingredients">
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;1 pound of potatoes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Garlic Powder</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Onion Powder</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Salt and Pepper</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;2 tablespoon of butter; melted</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Spinach sliced into cubes</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Beef Tacos</h2>
+                    <div className="ingredients">
+                        <div>
+                        <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;1-2 pounds of beef</label>
+                        </div>
+                        <div>
+                        <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Tortillas</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Olive Oil</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Tomatoes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Spinach sliced into cubes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Taco Seasoning (Spice Islands)</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Hash Browns</h2>
+                    <div className="ingredients">
+                        <div>
+                        <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;1-2 pounds of beef</label>
+                        </div>
+                        <div>
+                        <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Tortillas</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Olive Oil</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Tomatoes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Spinach sliced into cubes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="scales" name="scales"/>
+                            <label htmlFor="scales">&emsp;Taco Seasoning (Spice Islands)</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )

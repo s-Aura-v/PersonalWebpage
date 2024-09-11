@@ -7,7 +7,7 @@
 
 .proj-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(250px, .8fr) );
     grid-template-rows: repeat(auto-fit, 300px);
 }
 
@@ -32,4 +32,16 @@
 .popup-title {
     display: flex;
     justify-content: center;
+}
+
+.header-img {
+    grid-template-areas: 'myArea .' 'myArea .';
+    display: grid;
+    width: 200px;
+    height: 200px;
+    grid-template-columns: 400px 100%;
+}
+
+.first-column {
+    grid-area: myArea;
 }
