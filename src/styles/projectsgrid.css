@@ -34,14 +34,68 @@
     justify-content: center;
 }
 
+/*.header-img {*/
+/*    grid-template-areas: 'myArea .' 'myArea .';*/
+/*    display: grid;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    grid-template-columns: 400px 100%;*/
+/*}*/
+
+/*header-img > div > img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.first-column {*/
+/*    grid-area: myArea;*/
+/*}*/
+
 .header-img {
-    grid-template-areas: 'myArea .' 'myArea .';
     display: grid;
-    width: 200px;
-    height: 200px;
-    grid-template-columns: 400px 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    width: 600px;
+    height: 600px;
+
 }
 
-.first-column {
-    grid-area: myArea;
+.div1 { grid-area: 1 / 1 / 3 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 2 / 2 / 3 / 3; }
+
+
+.header-img > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
+
+.techdemo-logos {
+    width: 80px;
+}
+
+.tech-demo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.techdemo-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.techdemo-list > li {
+    display: inline-block;
+    margin: 0 20px 3px 0;
+    /* You can also add some margins here to make it look prettier */
+}
+
+

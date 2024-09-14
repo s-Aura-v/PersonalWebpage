@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import {NavBar} from "../components/NavBar.jsx";
 import {Footer} from "../components/Footer.jsx";
 import React, {useState} from "react";
-import YelpLogo from '../assets/whereabouts.svg'
+import YelpRecommendationLogo from '../assets/whereabouts.svg'
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
@@ -24,6 +24,16 @@ import FamilyThreadLogo from '../assets/familythread.svg'
 import FamilyThreadLogon from '../assets/FamilyThread/logon.png'
 import FamilyThreadTrees from '../assets/FamilyThread/mytrees.png'
 import FamilyThreadMain from '../assets/FamilyThread/mainpage.png'
+
+import MongoLogo from '../assets/mongo.svg'
+import ReactLogo from '../assets/react.svg'
+import HTML5Logo from '../assets/html5.svg'
+import CSSLogo from '../assets/css3.svg'
+import JavaLogo from '../assets/java.svg'
+import DockerLogo from '../assets/docker.svg'
+import JSLogo from '../assets/js.svg'
+import GradleLogo from '../assets/gradle.svg'
+import YelpLogo from '../assets/yelp.svg'
 
 
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
@@ -78,7 +88,7 @@ export function Projects() {
                 <div className="projects">
                     <div className="proj-container">
                         <div className="proj-cell" onClick={handleYelpOpen}>
-                            <img src={YelpLogo} alt="YelpLogo" className="proj-logo"/>
+                            <img src={YelpRecommendationLogo} alt="YelpLogo" className="proj-logo"/>
                             <strong> Yelp Recommendation </strong>
                             <div> A recommendation app that uses concepts of tf-idf and Dijkstra's algorithm to find
                                 path between businesses.
@@ -95,11 +105,13 @@ export function Projects() {
                             </DialogTitle>
                             <DialogContent dividers>
                                 <div className="tech-demo">
-                                    Tech Demo
-                                    <ul>
-                                        <li>Java with Gradle</li>
-                                        <li>Essential Library: GSON</li>
-                                        <li>Yelp Open Dataset</li>
+                                        <span className="mb-10">
+                                            Tech Demo
+                                        </span>
+                                    <ul className="techdemo-list">
+                                        <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
+                                        <li><img src={GradleLogo} className="techdemo-logos" alt="Gradle"/></li>
+                                        <li><img src={YelpLogo} className="techdemo-logos" alt="Yelp"/></li>
                                     </ul>
                                 </div>
                             </DialogContent>
@@ -129,26 +141,32 @@ export function Projects() {
                             </DialogTitle>
                             <DialogContent className="overflow-clip" dividers>
                                 <div>
-                                    {/*<div className="header-img">*/}
-                                    {/*    <div className="first-column">*/}
-                                    {/*        <img src={FamilyThreadLogon}/>*/}
-                                    {/*    </div>*/}
-                                    {/*    <div>*/}
-                                    {/*        <img src={FamilyThreadMain}/>*/}
-                                    {/*    </div>*/}
-                                    {/*    <div>*/}
-                                    {/*        <img src={FamilyThreadMain}/>*/}
-                                    {/*    </div>*/}
-                                    {/*</div>*/}
+                                    <div className="header-img">
+                                        <div className="div1">
+                                            <img src={FamilyThreadLogon}/>
+                                        </div>
+                                        <div className="div2">
+                                            <img src={FamilyThreadMain}/>
+                                        </div>
+                                        <div className="div3">
+                                            <img src={FamilyThreadMain}/>
+                                        </div>
+                                    </div>
 
                                     <div className="tech-demo">
-                                        Tech Demo
-                                        <ul>
-                                            <li>React</li>
-                                            <li>HTML / CSS / JavaScript</li>
-                                            <li>Java</li>
-                                            <li>Docker</li>
-                                            <li>MongoDB</li>
+                                        <span className="mb-10">
+                                            Tech Demo
+                                        </span>
+                                        <ul className="techdemo-list">
+                                            <li><img src={ReactLogo} className="techdemo-logos" alt="React"/></li>
+                                            <li><img src={HTML5Logo} className="techdemo-logos"
+                                                     alt="HTML / CSS / JavaScript"/></li>
+                                            <li><img src={CSSLogo} className="techdemo-logos" alt="CSS"/></li>
+                                            <li><img src={JSLogo} className="techdemo-logos"
+                                                     alt="HTML / CSS / JavaScript"/></li>
+                                            <li><img src={JavaLogo} className="techdemo-logos" alt="React"/></li>
+                                            <li><img src={DockerLogo} className="techdemo-logos" alt="Docker"/></li>
+                                            <li><img src={MongoLogo} className="techdemo-logos" alt="MongoDB"/></li>
                                         </ul>
                                     </div>
                                     <div>
@@ -186,20 +204,26 @@ export function Projects() {
                             </DialogTitle>
                             <DialogContent dividers>
                                 <div className="tech-demo">
-                                    Tech Demo
-                                    <ul>
-                                        <li>Java with Gradle</li>
-                                        <li>Essential Library: GSON</li>
-                                        <li>Yelp Open Dataset</li>
+                                        <span className="mb-10">
+                                            Tech Demo
+                                        </span>
+                                    <ul className="techdemo-list">
+                                        <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
+                                        <li><img src={GradleLogo} className="techdemo-logos" alt="Gradle"/></li>
                                     </ul>
                                 </div>
+
+
                                 <div>
-                                    I chose House MD as the theme for my project to add some personal flair into this project.
-                                    
+                                    I chose House MD as the theme for my project to add some personal flair into this
+                                    project.
+
                                 </div>
 
                                 <div>
-                                    Additional Resources: <a href="https://sid2697.github.io/external_pages/ELOPE.html" target="_blank"> Facility Layout using Genetic Algorithm at Meditab Software, Inc.
+                                    Additional Resources: <a href="https://sid2697.github.io/external_pages/ELOPE.html"
+                                                             target="_blank"> Facility Layout using Genetic Algorithm at
+                                    Meditab Software, Inc.
                                 </a>
                                 </div>
                             </DialogContent>
