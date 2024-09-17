@@ -34,7 +34,11 @@ import DockerLogo from '../assets/docker.svg'
 import JSLogo from '../assets/js.svg'
 import GradleLogo from '../assets/gradle.svg'
 import YelpLogo from '../assets/yelp.svg'
-
+import LeafletLogo from '../assets/leaflet.svg'
+import Auth0Logo from '../assets/auth0.svg'
+import SpringbootLogo from '../assets/springboot.svg'
+import FindMyCommunity from '../assets/HopHacks2024/findmycommunity.png'
+import FindMyCommunityLogo from '../assets/HopHacks2024/findmycommunitylogo.png'
 
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
     '& .MuiDialogContent-root': {
@@ -50,7 +54,7 @@ export function Projects() {
     const [yelpOpen, setYelpOpen] = useState(false);
     const [ftOpen, setFtOpen] = useState(false);
     const [gaOpen, setGaOpen] = useState(false);
-
+    const [fmcOpen, setFmcOpen] = useState(false);
 
     const handleYelpOpen = () => {
         setYelpOpen(true);
@@ -70,6 +74,12 @@ export function Projects() {
     };
     const handleGaClose = () => {
         setGaOpen(false);
+    };
+    const handleFmcOpen = () => {
+        setFmcOpen(true);
+    };
+    const handleFmcClose = () => {
+        setFmcOpen(false);
     };
 
     // const scrollModePluginInstance = scrollModePlugin();
@@ -213,11 +223,9 @@ export function Projects() {
                                     </ul>
                                 </div>
 
-
                                 <div>
                                     I chose House MD as the theme for my project to add some personal flair into this
                                     project.
-
                                 </div>
 
                                 <div>
@@ -233,12 +241,89 @@ export function Projects() {
                                 </Button>
                             </DialogActions>
                         </BootstrapDialog>
-
-
                     </div>
-
-
                 </div>
+
+                <h2>Events</h2>
+
+                <div className="events-container">
+                    <div className="proj-cell" onClick={handleFmcOpen}>
+                        <img src={FindMyCommunityLogo} alt="Find My Community Logo" className="proj-logo"/>
+                        <strong> Find My Community </strong>
+                        <div> A web application that allows people to host community service events, such as food
+                            banks, school events, and more, which can be easily accessed by the user.
+                        </div>
+                    </div>
+                    <BootstrapDialog
+                        onClose={handleFmcClose}
+                        open={fmcOpen}
+                        maxWidth='md'
+                        fullWidth
+                    >
+                        <DialogTitle className="popup-title">
+                            <span> Find My Community </span>
+                        </DialogTitle>
+                        <DialogContent dividers>
+                            <div className="headers-img">
+                                <div className="div1">
+                                    <img src={FindMyCommunity}/>
+                                </div>
+                            </div>
+                            <div className="tech-demo">
+                                        <span className="mb-10">
+                                            Tech Demo
+                                        </span>
+                                <ul className="techdemo-list">
+                                    <li><img src={ReactLogo} className="techdemo-logos" alt="React"/></li>
+                                    <li><img src={LeafletLogo} className="techdemo-logos" alt="Gradle"/></li>
+                                    <li><img src={Auth0Logo} className="techdemo-logos" alt="MongoDB"/></li>
+                                    <li><img src={MongoLogo} className="techdemo-logos" alt="MongoDB"/></li>
+                                    <li><img src={SpringbootLogo} className="techdemo-logos" alt="Springboot"/></li>
+                                </ul>
+                            </div>
+                            <div>
+                                History:
+                                This was a project completed within 36 hours for the HopHacks 2024 event. It is the
+                                annual
+                                hackathon hosted by John Hopkins University in Baltimore, Maryland.
+                                <br/><br/>
+                                Background:
+                                The internet makes it easy to be a bad person. Our algorithm promotes hate as it
+                                drives us
+                                interactions, our social media runs on said interactions, and . Therefore, we wanted
+                                to create
+                                an app that would make it easy to be help others.
+
+                                <br/><br/>
+                                Purpose:
+                                It is a web app that allows people to host community service events, such as food
+                                banks, school events, and more, which can be easily accessed by the user. The user
+                                would be able to RSVP to the event with a click allowing them to join without any
+                                excessive work. The main purpose of this webpage is to allow a seamless transition
+                                between hosting and joining an event because being a good person should not have to
+                                be difficult.
+
+                                <br/><br/>
+                                Link to Repository: <a
+                                href="https://github.com/s-Aura-v/FindYourCommunity-hophacks24"
+                                target="_blank">Find Your Community Github</a>
+                            </div>
+
+                            <div>
+                                Additional Resources: <a
+                                href="https://devpost.com/software/find-your-community?ref_content=user-portfolio&ref_feature=in_progress"
+                                target="_blank"> HopHacks Fall 2024
+                            </a>
+                            </div>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button autoFocus onClick={handleFmcClose}>
+                                Close
+                            </Button>
+                        </DialogActions>
+                    </BootstrapDialog>
+                </div>
+
                 <Footer/>
             </div>
         </>
