@@ -3,7 +3,6 @@
     flex-grow: 1;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
     width: 60%;
 }
 
@@ -95,7 +94,6 @@
     flex-grow: 1;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
     width: 60%;
     justify-content: center; /* Center align the content */
 }

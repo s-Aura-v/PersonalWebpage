@@ -124,6 +124,28 @@ export function Projects() {
                                         <li><img src={YelpLogo} className="techdemo-logos" alt="Yelp"/></li>
                                     </ul>
                                 </div>
+                                <div>
+                                    Background: <strong>TFIDF</strong>, Term-Frequency Inverse Document Frequency, is a
+                                    measure that can be
+                                    used to determine the importance of words in a large database. Cosine similatrity
+                                    can be used to find vector
+                                    between documents allowing us to compare the similarity between two items. TFIDF
+                                    and <strong>cosine similarity, </strong>can
+                                    be used to determine how compute the similarity between documents as it is done in
+                                    this project.
+                                    <br/><br/>
+                                    Purpose:
+                                    <ol>
+                                        <li>Go through the Yelp Database</li>
+                                        <li>Go through all the reviews and remove all function words</li>
+                                        <li>Compute TFIDF based on user input</li>
+                                        <li>Compute similarity vector between them</li>
+                                        <li>Create clusters of similar business based on data learned by running 5000 iterations </li>
+                                        <li>Use Dijkstra's Algorithm to find the shortest distance between two business in a cluster</li>
+                                    </ol>
+                                    <br/><br/>
+                                    Link to Repository: <a href="https://github.com/s-Aura-v/YelpRecommendation"> GitHub </a>
+                                </div>
                             </DialogContent>
                             <DialogActions>
                                 <Button autoFocus onClick={handleYelpClose}>
@@ -244,12 +266,12 @@ export function Projects() {
                     </div>
                 </div>
 
-                <h2>Events</h2>
+                <h2>Special Events</h2>
 
                 <div className="events-container">
                     <div className="proj-cell" onClick={handleFmcOpen}>
                         <img src={FindMyCommunityLogo} alt="Find My Community Logo" className="proj-logo"/>
-                        <strong> Find My Community </strong>
+                        <strong> HopHacks2024 <br/>Find My Community </strong>
                         <div> A web application that allows people to host community service events, such as food
                             banks, school events, and more, which can be easily accessed by the user.
                         </div>
