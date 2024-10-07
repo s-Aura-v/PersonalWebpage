@@ -19,7 +19,6 @@ export function NavBar() {
                     </ul>
                 </div>
             </div>
-
         </>
     )
 }

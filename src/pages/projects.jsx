@@ -39,6 +39,8 @@ import Auth0Logo from '../assets/auth0.svg'
 import SpringbootLogo from '../assets/springboot.svg'
 import FindMyCommunity from '../assets/HopHacks2024/findmycommunity.png'
 import FindMyCommunityLogo from '../assets/HopHacks2024/findmycommunitylogo.png'
+import FacilityOverviewDemo from '../assets/facilityOverviewDemo.png'
+import GeneticAlgorithmLogo from '../assets/GeneticAlgorithmLogo.png'
 
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
     '& .MuiDialogContent-root': {
@@ -140,11 +142,19 @@ export function Projects() {
                                         <li>Go through all the reviews and remove all function words</li>
                                         <li>Compute TFIDF based on user input</li>
                                         <li>Compute similarity vector between them</li>
-                                        <li>Create clusters of similar business based on data learned by running 5000 iterations </li>
-                                        <li>Use Dijkstra's Algorithm to find the shortest distance between two business in a cluster</li>
+                                        <li>Create clusters of similar business based on data learned by running 5000
+                                            iterations
+                                        </li>
+                                        <li>Use Dijkstra's Algorithm to find the shortest distance between two business
+                                            in a cluster
+                                        </li>
                                     </ol>
+                                    <br/>
+                                    Key Concepts: Cosine Similarity, Clusters, Dijkstra's Algorithm, Term Frequency
+                                    Inverse Document Frequency (TFIDF), B-Tree
                                     <br/><br/>
-                                    Link to Repository: <a href="https://github.com/s-Aura-v/YelpRecommendation"> GitHub </a>
+                                    Link to Repository: <a
+                                    href="https://github.com/s-Aura-v/YelpRecommendation"> GitHub </a>
                                 </div>
                             </DialogContent>
                             <DialogActions>
@@ -216,13 +226,11 @@ export function Projects() {
 
 
                         <div className="proj-cell" onClick={handleGaOpen}>
-                            <img src="none" alt="Facility Layout Logo" className="proj-logo"/>
+                            <img src={GeneticAlgorithmLogo} alt="Facility Layout Logo" className="proj-logo"/>
                             <strong> Facility Layout with Genetic Algorithm </strong>
-                            <div> Using parallel concepts, this program writes a genetic algorithm that places stations
-                                on a two dimensional space representing a
-                                one-floor factory. It create a list of layout with the highest
-                                affinity between stations and displays it
-                                depicting the best possible layout.
+                            <div> Using parallel concepts, this program uses the idea of a genetic algorithm to finds
+                                the best
+                                possible placement for stations on a two dimensional space.
                             </div>
                         </div>
                         <BootstrapDialog
@@ -235,6 +243,11 @@ export function Projects() {
                                 <span> Facility Layout with Genetic Algorithm </span>
                             </DialogTitle>
                             <DialogContent dividers>
+                                <div className="headers-img">
+                                    <div className="div1">
+                                        <img src={FacilityOverviewDemo}/>
+                                    </div>
+                                </div>
                                 <div className="tech-demo">
                                         <span className="mb-10">
                                             Tech Demo
@@ -242,19 +255,38 @@ export function Projects() {
                                     <ul className="techdemo-list">
                                         <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
                                         <li><img src={GradleLogo} className="techdemo-logos" alt="Gradle"/></li>
+                                        <li><div className="display-flex justify-content-center align-items-center">JavaFX</div></li>
                                     </ul>
                                 </div>
 
                                 <div>
-                                    I chose House MD as the theme for my project to add some personal flair into this
-                                    project.
+                                    Purpose: Create a parallel program that tries to fit X amount of stations into a NxN 2d space and have it iterate over Z times.
+                                    Each station should take different amount of space in the facility and should have "likes" and "dislikes" regarding proximity
+                                    to other stations.
+                                    <br/> <br/>
+                                    Core Concepts: Java Multithreading, Countdown Latch, JavaFX, Thread Management and Use
+                                    <br/><br/>
                                 </div>
 
                                 <div>
+                                    Lessons Learned
+                                    <ul>
+                                        <li>Don't try to do everything in one class. Return values to use in other
+                                            classes!
+                                        </li>
+                                        <li>Completely draft out my plan, including pseudocode. I only thought and drew
+                                            it conceptually, so writing the methods ended up being more complicated than
+                                            I had imagined.
+                                        </li>
+                                        <li>
+                                            When drafting, write what methods you might need in each class and what they
+                                            should return.
+                                        </li>
+                                    </ul>
+                                    <br/>
                                     Additional Resources: <a href="https://sid2697.github.io/external_pages/ELOPE.html"
                                                              target="_blank"> Facility Layout using Genetic Algorithm at
-                                    Meditab Software, Inc.
-                                </a>
+                                    Meditab Software, Inc. </a>
                                 </div>
                             </DialogContent>
                             <DialogActions>
