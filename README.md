@@ -1,8 +1,37 @@
-# React + Vite
+## Table of contents
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Quick start](#quick-start)
+* [Usage](#usage)
+* [Known issues and limitations](#known-issues-and-limitations)
+* [Getting help](#getting-help)
+* [Contributing](#contributing)
+* [License](#license)
+* [Acknowledgments](#acknowledgments)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Visit this page 
+
+You can visit this page at:
+s-aura-v.com 
+
+
+### Introduction
+
+This is my personal portfolio where I keep track of my progress as a Computer Scientists. It also has a hobby section for the things that I want to add. 
+
+
+## Projects
+
+1. Yelp Recommendation
+2. Family Thread
+3. Facility Layout with Genetic Algorithm
+4. Find My Community (HopHacks)
+
+
+## Links
+
+1. Github: https://github.com/s-Aura-v
+2. LinkedIn: https://www.linkedin.com/in/s-aura-v/
+3. Mail: sauravL2004@gmail.com
