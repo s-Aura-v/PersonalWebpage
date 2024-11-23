@@ -7,9 +7,12 @@
 }
 
 .proj-container {
-    display: flex;
+    display: grid;
     /*grid-template-columns: repeat( auto-fit, minmax(250px, .8fr) );*/
     /*grid-template-rows: repeat(auto-fit, 300px);*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 1em;
 }
 
 .proj-cell {

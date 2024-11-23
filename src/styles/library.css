@@ -1,0 +1,63 @@
+.library-container {
+    margin: 2rem 16rem;
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-row-gap: 2em;
+    column-gap: 1em;
+}
+
+.library-cell-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 180px;
+    background-color: pink;
+    font-size: .8em;
+}
+
+.library-img {
+    width: 120px;
+    height: 180px;
+    background-color: black;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1rem;
+}
+
+
+/*.homepage {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*    height: 100dvh;*/
+/*    width: 80dvw;*/
+/*    padding-top: 40px;*/
+/*}*/

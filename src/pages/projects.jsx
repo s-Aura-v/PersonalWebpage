@@ -106,7 +106,7 @@ export function Projects() {
                                 path between businesses.
                             </div>
                         </div>
-                        <BootstrapDialog
+                           <BootstrapDialog
                             onClose={handleYelpClose}
                             open={yelpOpen}
                             maxWidth='md'
@@ -255,16 +255,23 @@ export function Projects() {
                                     <ul className="techdemo-list">
                                         <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
                                         <li><img src={GradleLogo} className="techdemo-logos" alt="Gradle"/></li>
-                                        <li><div className="display-flex justify-content-center align-items-center">JavaFX</div></li>
+                                        <li>
+                                            <div
+                                                className="display-flex justify-content-center align-items-center">JavaFX
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <div>
-                                    Purpose: Create a parallel program that tries to fit X amount of stations into a NxN 2d space and have it iterate over Z times.
-                                    Each station should take different amount of space in the facility and should have "likes" and "dislikes" regarding proximity
+                                    Purpose: Create a parallel program that tries to fit X amount of stations into a NxN
+                                    2d space and have it iterate over Z times.
+                                    Each station should take different amount of space in the facility and should have
+                                    "likes" and "dislikes" regarding proximity
                                     to other stations.
                                     <br/> <br/>
-                                    Core Concepts: Java Multithreading, Countdown Latch, JavaFX, Thread Management and Use
+                                    Core Concepts: Java Multithreading, Countdown Latch, JavaFX, Thread Management and
+                                    Use
                                     <br/><br/>
                                 </div>
 
@@ -295,7 +302,88 @@ export function Projects() {
                                 </Button>
                             </DialogActions>
                         </BootstrapDialog>
+
+                        {/*<div className="proj-cell" onClick={handleGaOpen}>*/}
+                        {/*    <img src={GeneticAlgorithmLogo} alt="Facility Layout Logo" className="proj-logo"/>*/}
+                        {/*    <strong> Facility Layout with Genetic Algorithm </strong>*/}
+                        {/*    <div> Using parallel concepts, this program uses the idea of a genetic algorithm to finds*/}
+                        {/*        the best*/}
+                        {/*        possible placement for stations on a two dimensional space.*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+                        {/*<BootstrapDialog*/}
+                        {/*    onClose={handleGaClose}*/}
+                        {/*    open={gaOpen}*/}
+                        {/*    maxWidth='md'*/}
+                        {/*    fullWidth*/}
+                        {/*>*/}
+                        {/*    <DialogTitle className="popup-title">*/}
+                        {/*        <span> Facility Layout with Genetic Algorithm </span>*/}
+                        {/*    </DialogTitle>*/}
+                        {/*    <DialogContent dividers>*/}
+                        {/*        <div className="headers-img">*/}
+                        {/*            <div className="div1">*/}
+                        {/*                <img src={FacilityOverviewDemo}/>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*        <div className="tech-demo">*/}
+                        {/*                <span className="mb-10">*/}
+                        {/*                    Tech Demo*/}
+                        {/*                </span>*/}
+                        {/*            <ul className="techdemo-list">*/}
+                        {/*                <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>*/}
+                        {/*                <li><img src={GradleLogo} className="techdemo-logos" alt="Gradle"/></li>*/}
+                        {/*                <li>*/}
+                        {/*                    <div*/}
+                        {/*                        className="display-flex justify-content-center align-items-center">JavaFX*/}
+                        {/*                    </div>*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*        </div>*/}
+
+                        {/*        <div>*/}
+                        {/*            Purpose: Create a parallel program that tries to fit X amount of stations into a NxN*/}
+                        {/*            2d space and have it iterate over Z times.*/}
+                        {/*            Each station should take different amount of space in the facility and should have*/}
+                        {/*            "likes" and "dislikes" regarding proximity*/}
+                        {/*            to other stations.*/}
+                        {/*            <br/> <br/>*/}
+                        {/*            Core Concepts: Java Multithreading, Countdown Latch, JavaFX, Thread Management and*/}
+                        {/*            Use*/}
+                        {/*            <br/><br/>*/}
+                        {/*        </div>*/}
+
+                        {/*        <div>*/}
+                        {/*            Lessons Learned*/}
+                        {/*            <ul>*/}
+                        {/*                <li> In an executor service, there is a difference between running an existing class vs creating new class per executor.*/}
+                        {/*                    <br/> &emsp;executorService.execute(librarian); vs  executorService.execute(new Librarian(numberOfLibrarians, readProbability););*/}
+                        {/*                    <br/> &emsp;It is a simple mistake to make, but you should be careful.*/}
+                        {/*                </li>*/}
+                        {/*                <li>Completely draft out my plan, including pseudocode. I only thought and drew*/}
+                        {/*                    it conceptually, so writing the methods ended up being more complicated than*/}
+                        {/*                    I had imagined.*/}
+                        {/*                </li>*/}
+                        {/*                <li>*/}
+                        {/*                    When drafting, write what methods you might need in each class and what they*/}
+                        {/*                    should return.*/}
+                        {/*                </li>*/}
+                        {/*            </ul>*/}
+                        {/*            <br/>*/}
+                        {/*            Additional Resources: <a href="https://sid2697.github.io/external_pages/ELOPE.html"*/}
+                        {/*                                     target="_blank"> Facility Layout using Genetic Algorithm at*/}
+                        {/*            Meditab Software, Inc. </a>*/}
+                        {/*        </div>*/}
+                        {/*    </DialogContent>*/}
+                        {/*    <DialogActions>*/}
+                        {/*        <Button autoFocus onClick={handleGaClose}>*/}
+                        {/*            Close*/}
+                        {/*        </Button>*/}
+                        {/*    </DialogActions>*/}
+                        {/*</BootstrapDialog>*/}
                     </div>
+
+
                 </div>
 
                 <h2>Special Events</h2>
