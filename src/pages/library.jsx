@@ -1,17 +1,22 @@
-import {NavBar} from "../components/NavBar.jsx";
-import {Spotify} from "react-spotify-embed";
-import React, {useEffect, useState} from "react";
-import '../styles/library.css'
-
-import PerfBlue from "../assets/Library/Movies/perf_blue.jpg"
+import { NavBar } from "../components/NavBar.jsx";
+import React, { useEffect, useState } from "react";
+import '../styles/library.css';
 import Papa from "papaparse";
+import axios from "axios"; // We will use Axios for API calls
+import TMBD from '../assets/tmdb.png'
+
+const TMDB_API_KEY = import.meta.env.VITE_TMDB_KEY;
+const TMDB_BASE_URL = 'https://api.themoviedb.org/3/search/movie';
+const TMDB_IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 export function Library() {
     const [movies, setMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 32;
+    const [moviePosters, setMoviePosters] = useState({});
+    const itemsPerPage = 32; // 4 rows of 8 columns
 
     useEffect(() => {
+        // Fetch the CSV file
         const csvFilePath = "/watched.csv";
         fetch(csvFilePath)
             .then((response) => response.text())
@@ -21,18 +26,42 @@ export function Library() {
                     skipEmptyLines: true,
                     complete: (results) => {
                         setMovies(results.data);
+                        fetchMoviePosters(results.data);
                     },
                 });
             });
     }, []);
 
+    const fetchMoviePosters = async (movies) => {
+        let posters = {};
+        for (let movie of movies) {
+            try {
+                // Make a TMDb API call to search for the movie
+                const response = await axios.get(TMDB_BASE_URL, {
+                    params: {
+                        api_key: TMDB_API_KEY,
+                        query: movie.Name,
+                        language: 'en-US',
+                    }
+                });
+                const movieData = response.data.results[0];
+                if (movieData && movieData.poster_path) {
+                    posters[movie.Name] = `${TMDB_IMG_BASE_URL}${movieData.poster_path}`;
+                }
+            } catch (error) {
+                console.error('Error fetching movie poster:', error);
+            }
+        }
+        setMoviePosters(posters);
+    };
+
+    // Pagination logic
     const indexOfLastMovie = currentPage * itemsPerPage;
     const indexOfFirstMovie = indexOfLastMovie - itemsPerPage;
     const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
 
     const totalPages = Math.ceil(movies.length / itemsPerPage);
 
-    // Handle page change
     const handleNextPage = () => {
         if (currentPage < totalPages) {
             setCurrentPage(currentPage + 1);
@@ -53,15 +82,16 @@ export function Library() {
                     {currentMovies.map((movie, index) => (
                         <div className="library-cell-container" key={index}>
                             <div className="library-img">
-                                {/*<img src={PerfBlue} alt={movie.Name}/>*/}
-                            </div>
-                            <div className="library-caption">
-                                {movie.Name}
+                                <img
+                                    src={moviePosters[movie.Name]}
+                                    alt={movie.Name}
+                                />
                             </div>
                         </div>
                     ))}
                 </div>
 
+                {/* Pagination controls */}
                 <div className="pagination">
                     <button
                         onClick={handlePreviousPage}
@@ -76,6 +106,11 @@ export function Library() {
                     >
                         Next
                     </button>
+                    <br/>
+                </div>
+                <br/>
+                <div className="center">
+                    <img src={TMBD} alt="Images pulled from TMDB"/>
                 </div>
             </div>
         </>

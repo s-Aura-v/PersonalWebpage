@@ -52,6 +52,11 @@
     font-size: 1rem;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 
 /*.homepage {*/
 /*    display: flex;*/
