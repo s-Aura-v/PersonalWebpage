@@ -34,9 +34,8 @@ export function Library() {
 
     const fetchMoviePosters = async (movies) => {
         let posters = {};
-        for (let movie of movies) {
+        const posterPromises = movies.map(async (movie) => {
             try {
-                // Make a TMDb API call to search for the movie
                 const response = await axios.get(TMDB_BASE_URL, {
                     params: {
                         api_key: TMDB_API_KEY,
@@ -51,9 +50,11 @@ export function Library() {
             } catch (error) {
                 console.error('Error fetching movie poster:', error);
             }
-        }
+        });
+        await Promise.all(posterPromises);
         setMoviePosters(posters);
     };
+
 
     // Pagination logic
     const indexOfLastMovie = currentPage * itemsPerPage;
