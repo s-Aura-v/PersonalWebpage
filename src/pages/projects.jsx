@@ -42,6 +42,9 @@ import FindMyCommunityLogo from '../assets/HopHacks2024/findmycommunitylogo.png'
 import FacilityOverviewDemo from '../assets/facilityOverviewDemo.png'
 import GeneticAlgorithmLogo from '../assets/GeneticAlgorithmLogo.png'
 
+import HeatPropagationGIF from '../assets/heatPropagation_size4.gif'
+import HeatPropagationLogo from '../assets/heatPropagationLogo.png'
+
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
     '& .MuiDialogContent-root': {
         padding: theme.spacing(2),
@@ -57,6 +60,7 @@ export function Projects() {
     const [ftOpen, setFtOpen] = useState(false);
     const [gaOpen, setGaOpen] = useState(false);
     const [fmcOpen, setFmcOpen] = useState(false);
+    const [hpOpen, setHpOpen] = useState(false);
 
     const handleYelpOpen = () => {
         setYelpOpen(true);
@@ -83,6 +87,12 @@ export function Projects() {
     const handleFmcClose = () => {
         setFmcOpen(false);
     };
+    const handleHpOpen = () => {
+        setHpOpen(true);
+    };
+    const handleHpClose = () => {
+        setHpOpen(false);
+    };
 
     // const scrollModePluginInstance = scrollModePlugin();
     // scrollModePluginInstance.switchScrollMode(ScrollMode.Horizontal);
@@ -106,7 +116,7 @@ export function Projects() {
                                 path between businesses.
                             </div>
                         </div>
-                           <BootstrapDialog
+                        <BootstrapDialog
                             onClose={handleYelpClose}
                             open={yelpOpen}
                             maxWidth='md'
@@ -303,84 +313,176 @@ export function Projects() {
                             </DialogActions>
                         </BootstrapDialog>
 
-                        {/*<div className="proj-cell" onClick={handleGaOpen}>*/}
-                        {/*    <img src={GeneticAlgorithmLogo} alt="Facility Layout Logo" className="proj-logo"/>*/}
-                        {/*    <strong> Facility Layout with Genetic Algorithm </strong>*/}
-                        {/*    <div> Using parallel concepts, this program uses the idea of a genetic algorithm to finds*/}
-                        {/*        the best*/}
-                        {/*        possible placement for stations on a two dimensional space.*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-                        {/*<BootstrapDialog*/}
-                        {/*    onClose={handleGaClose}*/}
-                        {/*    open={gaOpen}*/}
-                        {/*    maxWidth='md'*/}
-                        {/*    fullWidth*/}
-                        {/*>*/}
-                        {/*    <DialogTitle className="popup-title">*/}
-                        {/*        <span> Facility Layout with Genetic Algorithm </span>*/}
-                        {/*    </DialogTitle>*/}
-                        {/*    <DialogContent dividers>*/}
-                        {/*        <div className="headers-img">*/}
-                        {/*            <div className="div1">*/}
-                        {/*                <img src={FacilityOverviewDemo}/>*/}
-                        {/*            </div>*/}
-                        {/*        </div>*/}
-                        {/*        <div className="tech-demo">*/}
-                        {/*                <span className="mb-10">*/}
-                        {/*                    Tech Demo*/}
-                        {/*                </span>*/}
-                        {/*            <ul className="techdemo-list">*/}
-                        {/*                <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>*/}
-                        {/*                <li><img src={GradleLogo} className="techdemo-logos" alt="Gradle"/></li>*/}
-                        {/*                <li>*/}
-                        {/*                    <div*/}
-                        {/*                        className="display-flex justify-content-center align-items-center">JavaFX*/}
-                        {/*                    </div>*/}
-                        {/*                </li>*/}
-                        {/*            </ul>*/}
-                        {/*        </div>*/}
+                        <div className="proj-cell" onClick={handleGaOpen}>
+                            <img src={GeneticAlgorithmLogo} alt="Facility Layout Logo" className="proj-logo"/>
+                            <strong> Parallel Performance Testing </strong>
+                            <div> Calculating the runtime between HashMap and SkipList through JMH Benchmarks.
+                            </div>
+                        </div>
+                        <BootstrapDialog
+                            onClose={handleGaClose}
+                            open={gaOpen}
+                            maxWidth='md'
+                            fullWidth
+                        >
+                            <DialogTitle className="popup-title">
+                                <span> Facility Layout with Genetic Algorithm </span>
+                            </DialogTitle>
+                            <DialogContent dividers>
+                                <div className="headers-img">
+                                    <div className="div1">
+                                        <img src={FacilityOverviewDemo}/>
+                                    </div>
+                                </div>
+                                <div className="tech-demo">
+                                        <span className="mb-10">
+                                            Tech Demo
+                                        </span>
+                                    <ul className="techdemo-list">
+                                        <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
+                                        <li><img src={GradleLogo} className="techdemo-logos" alt="Gradle"/></li>
+                                        <li>
+                                            <div
+                                                className="display-flex justify-content-center align-items-center">JavaFX
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                        {/*        <div>*/}
-                        {/*            Purpose: Create a parallel program that tries to fit X amount of stations into a NxN*/}
-                        {/*            2d space and have it iterate over Z times.*/}
-                        {/*            Each station should take different amount of space in the facility and should have*/}
-                        {/*            "likes" and "dislikes" regarding proximity*/}
-                        {/*            to other stations.*/}
-                        {/*            <br/> <br/>*/}
-                        {/*            Core Concepts: Java Multithreading, Countdown Latch, JavaFX, Thread Management and*/}
-                        {/*            Use*/}
-                        {/*            <br/><br/>*/}
-                        {/*        </div>*/}
+                                <div>
+                                    Purpose: Create a parallel program that tries to fit X amount of stations into a NxN
+                                    2d space and have it iterate over Z times.
+                                    Each station should take different amount of space in the facility and should have
+                                    "likes" and "dislikes" regarding proximity
+                                    to other stations.
+                                    <br/> <br/>
+                                    Core Concepts: Java Multithreading, Countdown Latch, JavaFX, Thread Management and
+                                    Use
+                                    <br/><br/>
+                                </div>
 
-                        {/*        <div>*/}
-                        {/*            Lessons Learned*/}
-                        {/*            <ul>*/}
-                        {/*                <li> In an executor service, there is a difference between running an existing class vs creating new class per executor.*/}
-                        {/*                    <br/> &emsp;executorService.execute(librarian); vs  executorService.execute(new Librarian(numberOfLibrarians, readProbability););*/}
-                        {/*                    <br/> &emsp;It is a simple mistake to make, but you should be careful.*/}
-                        {/*                </li>*/}
-                        {/*                <li>Completely draft out my plan, including pseudocode. I only thought and drew*/}
-                        {/*                    it conceptually, so writing the methods ended up being more complicated than*/}
-                        {/*                    I had imagined.*/}
-                        {/*                </li>*/}
-                        {/*                <li>*/}
-                        {/*                    When drafting, write what methods you might need in each class and what they*/}
-                        {/*                    should return.*/}
-                        {/*                </li>*/}
-                        {/*            </ul>*/}
-                        {/*            <br/>*/}
-                        {/*            Additional Resources: <a href="https://sid2697.github.io/external_pages/ELOPE.html"*/}
-                        {/*                                     target="_blank"> Facility Layout using Genetic Algorithm at*/}
-                        {/*            Meditab Software, Inc. </a>*/}
-                        {/*        </div>*/}
-                        {/*    </DialogContent>*/}
-                        {/*    <DialogActions>*/}
-                        {/*        <Button autoFocus onClick={handleGaClose}>*/}
-                        {/*            Close*/}
-                        {/*        </Button>*/}
-                        {/*    </DialogActions>*/}
-                        {/*</BootstrapDialog>*/}
+                                <div>
+                                    Lessons Learned
+                                    <ul>
+                                        <li> In an executor service, there is a difference between running an existing
+                                            class vs creating new class per executor.
+                                            <br/> &emsp;executorService.execute(librarian); vs
+                                            executorService.execute(new Librarian(numberOfLibrarians,
+                                            readProbability););
+                                            <br/> &emsp;It is a simple mistake to make, but you should be careful.
+                                        </li>
+                                        <li>Completely draft out my plan, including pseudocode. I only thought and drew
+                                            it conceptually, so writing the methods ended up being more complicated than
+                                            I had imagined.
+                                        </li>
+                                        <li>
+                                            When drafting, write what methods you might need in each class and what they
+                                            should return.
+                                        </li>
+                                    </ul>
+                                    <br/>
+                                    Additional Resources: <a href="https://sid2697.github.io/external_pages/ELOPE.html"
+                                                             target="_blank"> Facility Layout using Genetic Algorithm at
+                                    Meditab Software, Inc. </a>
+                                </div>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button autoFocus onClick={handleGaClose}>
+                                    Close
+                                </Button>
+                            </DialogActions>
+                        </BootstrapDialog>
+
+                        <div className="proj-cell" onClick={handleHpOpen}>
+                            <img src={HeatPropagationLogo} alt="Facility Layout Logo" className="proj-logo"/>
+                            <strong> Heat Propagation </strong>
+                            <div> Simulating the heating of a metal alloy with three subsection with different thermal
+                                characteristics in parallel with the use of relaxation algorithm.
+                            </div>
+                        </div>
+                        <BootstrapDialog
+                            onClose={handleHpClose}
+                            open={hpOpen}
+                            maxWidth='md'
+                            fullWidth
+                        >
+                            <DialogTitle className="popup-title">
+                                <span> Heat Propagation </span>
+                            </DialogTitle>
+                            <DialogContent dividers>
+                                <div className="headers-img">
+                                    <div className="div1 flex justify-content-center align-items-center">
+                                        <img src={HeatPropagationGIF}/>
+                                    </div>
+                                </div>
+                                <div className="tech-demo">
+                                        <span className="mb-10">
+                                            Tech Stack
+                                        </span>
+                                    <ul className="techdemo-list">
+                                        <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
+                                        <li>
+                                            <div
+                                                className="display-flex justify-content-center align-items-center">JavaSwing
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    Background: <br/>
+                                    Consider a rectangular metal alloy, four times as wide as high, consisting of three
+                                    different metals, each with different thermal characteristics. Simulate how the
+                                    metal alloy changes in temperature as it is heated from the top left and the bottom
+                                    right corner.
+
+                                    Each metal cell is comprised of three metals with independent heat constant values.
+                                    The values for S, T, C_1, C_2, C_3, the dimensions of the mesh, and the threshold
+                                    should be parameters of the program. Note, however, that combinations of these
+                                    parameters do not do not converge well. Try values of (0.75, 1.0, 1.25) C1, C2, C3
+                                    for your test/demo.
+
+                                    Lastly, this product should be implemented with a server connection.
+                                    <br/> <br/>
+                                    Core Concepts: Java Concurrency/Parallelism, JavaSwing, Server-Server Communication
+                                    (Java Sockets)
+                                    <br/><br/>
+                                </div>
+
+                                <div>
+                                    Lessons Learned
+                                    <ol>
+                                        <li> If dealing with relaxation problems, have a structure to store your new
+                                            values while retrieving data from the original dataset.
+                                        </li>
+                                        <li>If you follow step 1, then you can use threads to break apart a problem by
+                                            rows/columns to implement more threads and parallelize more.
+                                        </li>
+                                        <li>
+                                            It might be better to work on the GUI button inputs then use that to test
+                                            the program.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <br/>
+                                <div>
+                                    Faults + Next Steps
+                                    <ul>
+                                        <li> Follow step 2 to improve calculation. Currently, if the heat
+                                            propagation size is too large, it cannot complete in any reasonable time.
+                                        </li>
+                                        <li>
+                                            JavaFX has HeatMap Chart that could have been used to display the graph.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button autoFocus onClick={handleHpClose}>
+                                    Close
+                                </Button>
+                            </DialogActions>
+                        </BootstrapDialog>
                     </div>
 
 
