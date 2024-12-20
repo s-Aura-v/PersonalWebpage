@@ -41,9 +41,9 @@ import FindMyCommunity from '../assets/HopHacks2024/findmycommunity.png'
 import FindMyCommunityLogo from '../assets/HopHacks2024/findmycommunitylogo.png'
 import FacilityOverviewDemo from '../assets/facilityOverviewDemo.png'
 import GeneticAlgorithmLogo from '../assets/GeneticAlgorithmLogo.png'
-
 import HeatPropagationGIF from '../assets/heatPropagation_size4.gif'
 import HeatPropagationLogo from '../assets/heatPropagationLogo.png'
+import ParallelPerformanceDemo from '../assets/hashmapVsSkiplist.png'
 
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
     '& .MuiDialogContent-root': {
@@ -61,6 +61,7 @@ export function Projects() {
     const [gaOpen, setGaOpen] = useState(false);
     const [fmcOpen, setFmcOpen] = useState(false);
     const [hpOpen, setHpOpen] = useState(false);
+    const [ppOpen, setPpOpen] = useState(false);
 
     const handleYelpOpen = () => {
         setYelpOpen(true);
@@ -92,6 +93,12 @@ export function Projects() {
     };
     const handleHpClose = () => {
         setHpOpen(false);
+    };
+    const handlePpOpen = () => {
+        setPpOpen(true);
+    };
+    const handlePpClose = () => {
+        setPpOpen(false);
     };
 
     // const scrollModePluginInstance = scrollModePlugin();
@@ -313,25 +320,26 @@ export function Projects() {
                             </DialogActions>
                         </BootstrapDialog>
 
-                        <div className="proj-cell" onClick={handleGaOpen}>
-                            <img src={GeneticAlgorithmLogo} alt="Facility Layout Logo" className="proj-logo"/>
+                        <div className="proj-cell" onClick={handlePpOpen}>
+                            <img src={ParallelPerformanceDemo} alt="Facility Layout Logo" className="proj-logo"/>
                             <strong> Parallel Performance Testing </strong>
-                            <div> Calculating the runtime between HashMap and SkipList through JMH Benchmarks.
+                            <div> Simulate an application in which a set of threads all rely on a shared collection of
+                                data, then compare the throughput of the program for 2 parallel data structure.
                             </div>
                         </div>
                         <BootstrapDialog
-                            onClose={handleGaClose}
-                            open={gaOpen}
+                            onClose={handlePpClose}
+                            open={ppOpen}
                             maxWidth='md'
                             fullWidth
                         >
                             <DialogTitle className="popup-title">
-                                <span> Facility Layout with Genetic Algorithm </span>
+                                <span> Parallel Performance Testing </span>
                             </DialogTitle>
                             <DialogContent dividers>
                                 <div className="headers-img">
                                     <div className="div1">
-                                        <img src={FacilityOverviewDemo}/>
+                                        <img src={ParallelPerformanceDemo}/>
                                     </div>
                                 </div>
                                 <div className="tech-demo">
@@ -350,34 +358,54 @@ export function Projects() {
                                 </div>
 
                                 <div>
-                                    Purpose: Create a parallel program that tries to fit X amount of stations into a NxN
-                                    2d space and have it iterate over Z times.
-                                    Each station should take different amount of space in the facility and should have
-                                    "likes" and "dislikes" regarding proximity
-                                    to other stations.
+                                    Background <br/>
+                                    <ol>
+                                        <li>
+                                            Simulate an application in which a set of threads all rely on a shared
+                                            collection of
+                                            data; sometimes read-only, sometimes modifying the data. For example, a
+                                            game-server
+                                            with game-state as the collection, or a campus course scheduling system.
+                                            Write a
+                                            stripped-down version of this in which all the threads just emulate clients,
+                                            and
+                                            further strips out nearly everything except the reading and writing (while
+                                            still
+                                            somehow using results).
+                                        </li>
+                                        <li>
+                                            Write one solution using a data structure and/or locking scheme of your own
+                                            devising (most likely a variant of some known technique). Write another to
+                                            primarily use standard platform library components.
+                                        </li>
+                                        <li>
+                                            Compare the throughput of your program across at least two different loads
+                                            on each of at least two different platforms using JMH.
+                                        </li>
+                                    </ol>
+
                                     <br/> <br/>
-                                    Core Concepts: Java Multithreading, Countdown Latch, JavaFX, Thread Management and
-                                    Use
+                                    Core Concepts: Read-mostly Data, Java Multithreading, Concurrent SkipList,
+                                    Concurrent HashMap, JMH Testing
                                     <br/><br/>
                                 </div>
 
                                 <div>
-                                    Lessons Learned
+                                    Failures + Next-Steps
                                     <ul>
-                                        <li> In an executor service, there is a difference between running an existing
-                                            class vs creating new class per executor.
-                                            <br/> &emsp;executorService.execute(librarian); vs
-                                            executorService.execute(new Librarian(numberOfLibrarians,
-                                            readProbability););
-                                            <br/> &emsp;It is a simple mistake to make, but you should be careful.
-                                        </li>
-                                        <li>Completely draft out my plan, including pseudocode. I only thought and drew
-                                            it conceptually, so writing the methods ended up being more complicated than
-                                            I had imagined.
+                                        <li> SkipList data testing was skewed because we were randomly accessing data
+                                            that was not added to the skiplist. <br/>
+                                            &ensp; To get a more refined testing, it should have mostly tested data that
+                                            was already in the SkipList so we could compare better with HashMap.
                                         </li>
                                         <li>
-                                            When drafting, write what methods you might need in each class and what they
-                                            should return.
+                                            Better yet, it would have been better to perform 4 test cases.
+                                            <ol>
+                                                <li>Blocking HashMap</li>
+                                                <li>Non-Blocking HashMap</li>
+                                                <li>Blocking SkipList</li>
+                                                <li>Non-Blocking SkipList</li>
+                                            </ol>
                                         </li>
                                     </ul>
                                     <br/>
@@ -387,7 +415,7 @@ export function Projects() {
                                 </div>
                             </DialogContent>
                             <DialogActions>
-                                <Button autoFocus onClick={handleGaClose}>
+                                <Button autoFocus onClick={handlePpClose}>
                                     Close
                                 </Button>
                             </DialogActions>
