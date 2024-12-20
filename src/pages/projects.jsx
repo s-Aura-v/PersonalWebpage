@@ -44,6 +44,8 @@ import GeneticAlgorithmLogo from '../assets/GeneticAlgorithmLogo.png'
 import HeatPropagationGIF from '../assets/heatPropagation_size4.gif'
 import HeatPropagationLogo from '../assets/heatPropagationLogo.png'
 import ParallelPerformanceDemo from '../assets/hashmapVsSkiplist.png'
+import CheckMateLogo from '../assets/CheckMate/logo.svg'
+import CheckMateDemo from '../assets/CheckMate/Automated Test (Final Version).mov'
 
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
     '& .MuiDialogContent-root': {
@@ -62,6 +64,7 @@ export function Projects() {
     const [fmcOpen, setFmcOpen] = useState(false);
     const [hpOpen, setHpOpen] = useState(false);
     const [ppOpen, setPpOpen] = useState(false);
+    const [cmOpen, setCmOpen] = useState(false);
 
     const handleYelpOpen = () => {
         setYelpOpen(true);
@@ -100,6 +103,12 @@ export function Projects() {
     const handlePpClose = () => {
         setPpOpen(false);
     };
+    const handleCmOpen = () => {
+        setCmOpen(true);
+    };
+    const handleCmClose = () => {
+        setCmOpen(false);
+    };
 
     // const scrollModePluginInstance = scrollModePlugin();
     // scrollModePluginInstance.switchScrollMode(ScrollMode.Horizontal);
@@ -114,6 +123,7 @@ export function Projects() {
             <div className="homepage">
                 <NavBar/>
                 <br/>
+                <h2>Solo Projects</h2>
                 <div className="projects">
                     <div className="proj-container">
                         <div className="proj-cell" onClick={handleYelpOpen}>
@@ -176,66 +186,6 @@ export function Projects() {
                             </DialogContent>
                             <DialogActions>
                                 <Button autoFocus onClick={handleYelpClose}>
-                                    Close
-                                </Button>
-                            </DialogActions>
-                        </BootstrapDialog>
-
-                        <div className="proj-cell" onClick={handleFtOpen}>
-                            <img src={FamilyThreadLogo} alt="YelpLogo" className="proj-logo"/>
-                            <strong> Family Thread </strong>
-                            <div> A webpage with interactive functions that allows the user to login through google,
-                                create and edit family trees which is saved on our servers, so that it may be accessed
-                                in different devices.
-                            </div>
-                        </div>
-                        <BootstrapDialog
-                            onClose={handleFtClose}
-                            open={ftOpen}
-                            maxWidth='xl' x
-                            fullWidth
-                        >
-                            <DialogTitle className="popup-title">
-                                <span> Family Thread </span>
-                            </DialogTitle>
-                            <DialogContent className="overflow-clip" dividers>
-                                <div>
-                                    <div className="header-img">
-                                        <div className="div1">
-                                            <img src={FamilyThreadLogon}/>
-                                        </div>
-                                        <div className="div2">
-                                            <img src={FamilyThreadMain}/>
-                                        </div>
-                                        <div className="div3">
-                                            <img src={FamilyThreadMain}/>
-                                        </div>
-                                    </div>
-
-                                    <div className="tech-demo">
-                                        <span className="mb-10">
-                                            Tech Demo
-                                        </span>
-                                        <ul className="techdemo-list">
-                                            <li><img src={ReactLogo} className="techdemo-logos" alt="React"/></li>
-                                            <li><img src={HTML5Logo} className="techdemo-logos"
-                                                     alt="HTML / CSS / JavaScript"/></li>
-                                            <li><img src={CSSLogo} className="techdemo-logos" alt="CSS"/></li>
-                                            <li><img src={JSLogo} className="techdemo-logos"
-                                                     alt="HTML / CSS / JavaScript"/></li>
-                                            <li><img src={JavaLogo} className="techdemo-logos" alt="React"/></li>
-                                            <li><img src={DockerLogo} className="techdemo-logos" alt="Docker"/></li>
-                                            <li><img src={MongoLogo} className="techdemo-logos" alt="MongoDB"/></li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        PERSONAL NOTE: FIX PDF FOR DIAGRAMS
-                                    </div>
-
-                                </div>
-                            </DialogContent>
-                            <DialogActions>
-                                <Button autoFocus onClick={handleFtClose}>
                                     Close
                                 </Button>
                             </DialogActions>
@@ -515,6 +465,165 @@ export function Projects() {
 
 
                 </div>
+
+                <h2> Team Projects </h2>
+                <div className="events-container">
+                    <div className="proj-cell" onClick={handleFtOpen}>
+                        <img src={FamilyThreadLogo} alt="YelpLogo" className="proj-logo"/>
+                        <strong> Family Thread </strong>
+                        <div> A webpage with interactive functions that allows the user to login through google,
+                            create and edit family trees which is saved on our servers, so that it may be accessed
+                            in different devices.
+                        </div>
+                    </div>
+                    <BootstrapDialog
+                        onClose={handleFtClose}
+                        open={ftOpen}
+                        maxWidth='xl' x
+                        fullWidth
+                    >
+                        <DialogTitle className="popup-title">
+                            <span> Family Thread </span>
+                        </DialogTitle>
+                        <DialogContent className="overflow-clip" dividers>
+                            <div>
+                                <div className="header-img">
+                                    <div className="div1">
+                                        <img src={FamilyThreadLogon}/>
+                                    </div>
+                                    <div className="div2">
+                                        <img src={FamilyThreadMain}/>
+                                    </div>
+                                    <div className="div3">
+                                        <img src={FamilyThreadMain}/>
+                                    </div>
+                                </div>
+
+                                <div className="tech-demo">
+                                        <span className="mb-10">
+                                            Tech Demo
+                                        </span>
+                                    <ul className="techdemo-list">
+                                        <li><img src={ReactLogo} className="techdemo-logos" alt="React"/></li>
+                                        <li><img src={HTML5Logo} className="techdemo-logos"
+                                                 alt="HTML / CSS / JavaScript"/></li>
+                                        <li><img src={CSSLogo} className="techdemo-logos" alt="CSS"/></li>
+                                        <li><img src={JSLogo} className="techdemo-logos"
+                                                 alt="HTML / CSS / JavaScript"/></li>
+                                        <li><img src={JavaLogo} className="techdemo-logos" alt="React"/></li>
+                                        <li><img src={DockerLogo} className="techdemo-logos" alt="Docker"/></li>
+                                        <li><img src={MongoLogo} className="techdemo-logos" alt="MongoDB"/></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    PERSONAL NOTE: FIX PDF FOR DIAGRAMS
+                                </div>
+
+                            </div>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button autoFocus onClick={handleFtClose}>
+                                Close
+                            </Button>
+                        </DialogActions>
+                    </BootstrapDialog>
+
+                    <div className="proj-cell" onClick={handleCmOpen}>
+                        <img src={CheckMateLogo} alt="YelpLogo" className="proj-logo"/>
+                        <strong> Checkmate </strong>
+                        <div> CheckMate is a streamlined checklist application for desktop use, accessible via web
+                            browser allowing for creation of projects, tasks, and other features.
+                        </div>
+                    </div>
+                    <BootstrapDialog
+                        onClose={handleCmClose}
+                        open={cmOpen}
+                        maxWidth='xl' x
+                        fullWidth
+                    >
+                        <DialogTitle className="popup-title">
+                            <span> Checkmate </span>
+                        </DialogTitle>
+                        <DialogContent className="overflow-clip" dividers>
+                            <div>
+                                <div className="headers-img">
+                                    <div className="div1">
+                                        <video controls="controls" width="1024" height="576" name="Checkmate Demo">
+                                            <source src={CheckMateDemo}/>
+                                        </video>
+                                    </div>
+                                </div>
+                                <div className="tech-demo">
+                                        <span className="mb-10">
+                                            Tech Demo
+                                        </span>
+                                    <ul className="techdemo-list">
+                                        <li><img src={ReactLogo} className="techdemo-logos" alt="React"/></li>
+                                        <li><img src={ReactLogo} className="techdemo-logos" alt="Vite"/></li>
+                                        <li><img src={HTML5Logo} className="techdemo-logos"
+                                                 alt="HTML / CSS / JavaScript"/></li>
+                                        <li><img src={CSSLogo} className="techdemo-logos" alt="CSS"/></li>
+                                        <li><img src={JSLogo} className="techdemo-logos"
+                                                 alt="HTML / CSS / JavaScript"/></li>
+                                        <li><img src={DockerLogo} className="techdemo-logos" alt="Docker"/></li>
+                                        <li><img src={MongoLogo} className="techdemo-logos" alt="SQLite"/></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    Goal: <br/>
+                                    Create a user-friendly, web-based checklist that helps people manage, prioritize,
+                                    and track tasks efficiently and easily with a focus on simplicity and usability to
+                                    boost productivity, reduce stress, and enhance users' sense of accomplishment.
+
+                                    <br/><br/>
+                                    Lessons Learned:
+                                    <ol>
+                                        <li>
+                                            We learned the importance of using direct, concise, and essential
+                                            information to convey requirements.
+                                        </li>
+                                        <li>
+                                            Cross-team communication was invaluable in shaping the product and the
+                                            importance of having clear goals and deliverables.
+                                        </li>
+                                        <li>
+                                            We learned to be more concise in our documentation efforts to reduce effort
+                                            duplication and to make items more visible to other teams and to divide the
+                                            workload, collaborate effectively, and enjoy the process
+                                        </li>
+                                    </ol>
+
+                                    <br/>
+                                    Failures + Next-Steps:
+                                    <ul>
+                                        <li>
+                                            Add additional social logins
+                                        </li>
+                                        <li>
+                                            Create the ability for task duplication and repetition along with a search
+                                            functionality for users who have many tasks or projects
+                                        </li>
+                                        <li>
+                                            Setup automatic database migration to assist with updates to the schema
+                                        </li>
+                                    </ul>
+                                    <br/>
+
+                                    <div>
+                                        <h3>Showcase</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button autoFocus onClick={handleCmClose}>
+                                Close
+                            </Button>
+                        </DialogActions>
+                    </BootstrapDialog>
+                </div>
+
 
                 <h2>Special Events</h2>
 
