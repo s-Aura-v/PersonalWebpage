@@ -11,13 +11,11 @@ const TMDB_IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 export function MovieLibrary() {
     const [movies, setMovies] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
     const [moviePosters, setMoviePosters] = useState({});
-    const itemsPerPage = 32; // 4 rows of 8 columns
 
     useEffect(() => {
         // Fetch the CSV file
-        const csvFilePath = "/watched.csv";
+        const csvFilePath = "/ratings.csv";
         fetch(csvFilePath)
             .then((response) => response.text())
             .then((csvData) => {
@@ -25,8 +23,12 @@ export function MovieLibrary() {
                     header: true,
                     skipEmptyLines: true,
                     complete: (results) => {
-                        setMovies(results.data);
-                        fetchMoviePosters(results.data);
+                        // Sort the movies by rating (highest to lowest)
+                        const sortedMovies = results.data.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+                        setMovies(sortedMovies);
+                        console.log(sortedMovies);
+
+                        fetchMoviePosters(sortedMovies);
                     },
                 });
             });
@@ -55,63 +57,23 @@ export function MovieLibrary() {
         setMoviePosters(posters);
     };
 
-
-    // Pagination logic
-    const indexOfLastMovie = currentPage * itemsPerPage;
-    const indexOfFirstMovie = indexOfLastMovie - itemsPerPage;
-    const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
-
-    const totalPages = Math.ceil(movies.length / itemsPerPage);
-
-    const handleNextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
-
-    const handlePreviousPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1);
-        }
-    };
-
     return (
         <>
-                <div className="library-grid">
-                    {currentMovies.map((movie, index) => (
-                        <div className="library-cell-container" key={index}>
-                            <div className="library-img">
-                                <img
-                                    src={moviePosters[movie.Name]}
-                                    alt={movie.Name}
-                                />
-                            </div>
+            <div className="library-grid">
+                {movies.map((movie, index) => (
+                    <div className="library-cell-container" key={index}>
+                        <div className="library-img">
+                            <img
+                                src={moviePosters[movie.Name]}
+                                alt={movie.Name}
+                            />
                         </div>
-                    ))}
-                </div>
-
-                {/* Pagination controls */}
-                <div className="pagination">
-                    <button
-                        onClick={handlePreviousPage}
-                        disabled={currentPage === 1}
-                    >
-                        Previous
-                    </button>
-                    <span>Page {currentPage} of {totalPages}</span>
-                    <button
-                        onClick={handleNextPage}
-                        disabled={currentPage === totalPages}
-                    >
-                        Next
-                    </button>
-                    <br/>
-                </div>
-                <br/>
-                <div className="center">
-                    <img src={TMBD} alt="Images pulled from TMDB"/>
-                </div>
-
+                    </div>
+                ))}
+            </div>
+            <div className="center">
+                <img src={TMBD} alt="Images pulled from TMDB"/>
+            </div>
         </>
     );
 }

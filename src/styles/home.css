@@ -60,6 +60,10 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
+.tabs {
+    display: flex;
+    justify-content: center;
+}
 .tabs-list {
     list-style-type: none;
     margin: 0;
