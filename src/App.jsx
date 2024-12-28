@@ -15,7 +15,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/hobbies" element={<Hobbies />} />
-                <Route path="/library" element={<Library/>} />
+                <Route path="/journal" element={<Library/>} />
             </Routes>
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
             </Worker>

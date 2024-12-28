@@ -34,47 +34,16 @@ export function AnimeLibrary() {
         return animeElements.map((anime) => anime.getElementsByTagName('series_title')[0].value);
     };
 
-    // Pagination logic
-    const indexOfLastAnime = currentPage * itemsPerPage;
-    const indexOfFirstAnime = indexOfLastAnime - itemsPerPage;
-    const currentAnime = animeTitles.slice(indexOfFirstAnime, indexOfLastAnime);
-    const totalPages = Math.ceil(animeTitles.length / itemsPerPage);
-
-    const handleNextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
-
-    const handlePreviousPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1);
-        }
-    };
-
     return (
         <>
             <div className="library-grid">
-                {currentAnime.map((title, index) => (
+                {animeTitles.map((title, index) => (
                     <div className="library-cell-container" key={index}>
                         <div className="library-item">
                             <h3>{title}</h3>
                         </div>
                     </div>
                 ))}
-            </div>
-
-            {/* Pagination controls */}
-            <div className="pagination">
-                <button onClick={handlePreviousPage} disabled={currentPage === 1}>
-                    Previous
-                </button>
-                <span>
-                    Page {currentPage} of {totalPages}
-                </span>
-                <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-                    Next
-                </button>
             </div>
         </>
     );

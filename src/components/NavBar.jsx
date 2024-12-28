@@ -15,7 +15,7 @@ export function NavBar() {
                     <ul className="tabs-list">
                         <li><a href="/">HOME</a></li>
                         <li><a href="/projects">PROJECTS</a></li>
-                        <li><a href="/library">LIBRARY</a></li>
+                        <li><a href="/journal">JOURNAL</a></li>
                     </ul>
                 </div>
             </div>

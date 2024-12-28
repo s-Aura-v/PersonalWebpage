@@ -59,6 +59,9 @@ export function MovieLibrary() {
 
     return (
         <>
+            <div className="center">
+                <h2>please wait a few seconds for the movies to load...</h2>
+            </div>
             <div className="library-grid">
                 {movies.map((movie, index) => (
                     <div className="library-cell-container" key={index}>
