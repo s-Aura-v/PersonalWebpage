@@ -524,7 +524,22 @@ export function Projects() {
                                     </ul>
                                 </div>
                                 <div>
-                                    PERSONAL NOTE: FIX PDF FOR DIAGRAMS
+
+
+                                    <div className="center">
+                                        <ul className="techdemo-list">
+                                            <li><a target="_blank"
+                                                   href="https://docs.google.com/document/d/11B28y6oOiERerFPX_XxYENGVtfmS9Hh0Rd-VsAGmaLA/edit?tab=t.0">UI Mockups</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.google.com/document/d/1i-fUfkOxltjOwh3GldsWsaHDKplJdekDR866CqMVcRQ/edit?tab=t.0">SRS
+                                                IEEE Documentation</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://miro.com/app/board/uXjVKlwPhX8=/?share_link_id=482308476952">Activity and Sequence Diagrams</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.google.com/document/d/12R4Os32mwC-Z_mf2vRKDYGAMDoETlb9WyL_Qd3IIKbE/edit?tab=t.0">Testing
+                                                Plan</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                             </div>
@@ -567,7 +582,8 @@ export function Projects() {
                                         </span>
                                     <ul className="techdemo-list">
                                         <li><img src={ReactLogo} className="techdemo-logos" alt="React"/></li>
-                                        <li><img src='../assets/vite-svgrepo-com.svg' className="techdemo-logos" alt="Vite"/></li>
+                                        <li><img src='../assets/vite-svgrepo-com.svg' className="techdemo-logos"
+                                                 alt="Vite"/></li>
                                         <li><img src={HTML5Logo} className="techdemo-logos"
                                                  alt="HTML / CSS / JavaScript"/></li>
                                         <li><img src={CSSLogo} className="techdemo-logos" alt="CSS"/></li>
@@ -621,18 +637,34 @@ export function Projects() {
                                     href="https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Fall-2024"> GitHub </a>
                                     <br/>
 
-                                    <div>
+                                    <div className="center">
                                         Documents:
                                     </div>
-                                    <ul>
-                                        <li><a target="_blank" href="https://docs.google.com/document/d/11B28y6oOiERerFPX_XxYENGVtfmS9Hh0Rd-VsAGmaLA/edit?tab=t.0">User Manual</a></li>
-                                        <li><a target="_blank" href="https://docs.google.com/document/d/1i-fUfkOxltjOwh3GldsWsaHDKplJdekDR866CqMVcRQ/edit?tab=t.0">SRS IEEE Documentation</a></li>
-                                        <li><a target="_blank" href="https://miro.com/app/board/uXjVKlwPhX8=/?share_link_id=482308476952">Miro Board Sprint Tracking</a></li>
-                                        <li><a target="_blank" href="https://www.figma.com/board/LKr1Mf6yCC5WPvgfSb5AuZ/Planning?node-id=0-1&t=HbVVpaVx5EFYIzQP-1">FigJam Sketches</a></li>
-                                        <li><a target="_blank" href="https://www.figma.com/design/W774lSGq4gQoIVCJtCOxg8/To-Do-List-Usability-Prototype?node-id=0-1&t=XQBOELElZ7PzIHcD-0">Figma Wireframes</a></li>
-                                        <li><a target="_blank" href="https://www.figma.com/proto/W774lSGq4gQoIVCJtCOxg8/To-Do-List-Usability-Prototype?node-id=840-4332&starting-point-node-id=840%3A4332&t=u3Fg35FUxNquK67E-1">High-Fidelity Prototype</a></li>
-                                        <li><a target="_blank" href="https://docs.google.com/document/d/12R4Os32mwC-Z_mf2vRKDYGAMDoETlb9WyL_Qd3IIKbE/edit?tab=t.0">Testing Plan</a></li>
-                                    </ul>
+                                    <div className="center">
+                                        <ul className="techdemo-list">
+                                            <li><a target="_blank"
+                                                   href="https://docs.google.com/document/d/11B28y6oOiERerFPX_XxYENGVtfmS9Hh0Rd-VsAGmaLA/edit?tab=t.0">User
+                                                Manual</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.google.com/document/d/1i-fUfkOxltjOwh3GldsWsaHDKplJdekDR866CqMVcRQ/edit?tab=t.0">SRS
+                                                IEEE Documentation</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://miro.com/app/board/uXjVKlwPhX8=/?share_link_id=482308476952">Miro
+                                                Board Sprint Tracking</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://www.figma.com/board/LKr1Mf6yCC5WPvgfSb5AuZ/Planning?node-id=0-1&t=HbVVpaVx5EFYIzQP-1">FigJam
+                                                Sketches</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://www.figma.com/design/W774lSGq4gQoIVCJtCOxg8/To-Do-List-Usability-Prototype?node-id=0-1&t=XQBOELElZ7PzIHcD-0">Figma
+                                                Wireframes</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://www.figma.com/proto/W774lSGq4gQoIVCJtCOxg8/To-Do-List-Usability-Prototype?node-id=840-4332&starting-point-node-id=840%3A4332&t=u3Fg35FUxNquK67E-1">High-Fidelity
+                                                Prototype</a></li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.google.com/document/d/12R4Os32mwC-Z_mf2vRKDYGAMDoETlb9WyL_Qd3IIKbE/edit?tab=t.0">Testing
+                                                Plan</a></li>
+                                        </ul>
+                                    </div>
 
                                 </div>
 
