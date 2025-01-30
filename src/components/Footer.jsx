@@ -24,7 +24,7 @@ export function Footer() {
                 </div>
             </div>
             <div className="footer">
-                Saurav Lamichhane. 2024.
+                Saurav Lamichhane. 2024-2025.
             </div>
         </>
     )

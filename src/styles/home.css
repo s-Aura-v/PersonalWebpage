@@ -24,7 +24,7 @@
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: #f1f1fc;
+    background-color: white;
 }
 
 img, picture, video, canvas, svg {
@@ -118,7 +118,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-    background-color: skyblue;
+    background-color: black;
+    color: white;
     height: 50px;
     font-size: 1.5rem;
     display: flex;

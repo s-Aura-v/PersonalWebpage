@@ -46,6 +46,10 @@ import HeatPropagationLogo from '../assets/heatPropagationLogo.png'
 import ParallelPerformanceDemo from '../assets/hashmapVsSkiplist.png'
 import CheckMateLogo from '../assets/CheckMate/logo.svg'
 import CheckMateDemo from '../assets/CheckMate/Automated Test (Final Version).mov'
+import FamilyThreadUIMockup from '../assets/FamilyThread/finalUIMockup.pdf'
+import FamilyThreadDiagrams from '../assets/FamilyThread/diagrams.pdf'
+import FamilyThreadSRS from '../assets/FamilyThread/Family Tree SRS IEEE 29148-2018.docx.pdf'
+import FamilyThreadInstallation from '../assets/FamilyThread/Family Thread Installation Guide .pdf'
 
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
     '& .MuiDialogContent-root': {
@@ -495,18 +499,9 @@ export function Projects() {
                         </DialogTitle>
                         <DialogContent className="overflow-clip" dividers>
                             <div>
-                                <div className="header-img">
-                                    <div className="div1">
-                                        <img src={FamilyThreadLogon}/>
-                                    </div>
-                                    <div className="div2">
-                                        <img src={FamilyThreadMain}/>
-                                    </div>
-                                    <div className="div3">
-                                        <img src={FamilyThreadMain}/>
-                                    </div>
-                                </div>
+                                <div>
 
+                                </div>
                                 <div className="tech-demo">
                                         <span className="mb-10">
                                             Tech Demo
@@ -529,15 +524,15 @@ export function Projects() {
                                     <div className="center">
                                         <ul className="techdemo-list">
                                             <li><a target="_blank"
-                                                   href="https://docs.google.com/document/d/11B28y6oOiERerFPX_XxYENGVtfmS9Hh0Rd-VsAGmaLA/edit?tab=t.0">UI Mockups</a></li>
+                                                   href={FamilyThreadUIMockup}>UI Mockups</a></li>
                                             <li><a target="_blank"
-                                                   href="https://docs.google.com/document/d/1i-fUfkOxltjOwh3GldsWsaHDKplJdekDR866CqMVcRQ/edit?tab=t.0">SRS
+                                                   href={FamilyThreadSRS}>SRS
                                                 IEEE Documentation</a></li>
                                             <li><a target="_blank"
-                                                   href="https://miro.com/app/board/uXjVKlwPhX8=/?share_link_id=482308476952">Activity and Sequence Diagrams</a></li>
+                                                   href={FamilyThreadDiagrams}>Activity and Sequence Diagrams</a></li>
                                             <li><a target="_blank"
-                                                   href="https://docs.google.com/document/d/12R4Os32mwC-Z_mf2vRKDYGAMDoETlb9WyL_Qd3IIKbE/edit?tab=t.0">Testing
-                                                Plan</a></li>
+                                                   href={FamilyThreadInstallation}>Installation Guide
+                                                </a></li>
                                         </ul>
                                     </div>
                                 </div>
