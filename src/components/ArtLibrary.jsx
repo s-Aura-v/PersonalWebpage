@@ -14,30 +14,48 @@ export function ArtLibrary() {
     return (
         <>
 
-            <div className="album">
-                <div className="responsive-container-block bg">
-                    <div className="responsive-container-block img-cont">
-                        <img className="img"
-                             src={F24_P1}/>
-                        <img className="{img}"
-                             src={S24_P2_1}/>
-                    </div>
-                    <div className="responsive-container-block img-cont">
-                        <img className="img img-big"
-                             src={F24_P2}/>
-                        <img className="img img-big "
-                             src={F24_P2_1}/>
-                        <img className="img img-big "
-                             src={S24_P2_2}/>
-                    </div>
-                    <div className="responsive-container-block img-cont">
-                        <img className="img"
-                             src={F24_P3}/>
-                        <img className="img"
-                             src={F24_P3_1}/>
-                        <img className="img"
-                             src={S24_P2_3}/>
-                    </div>
+            {/*<div className="album">*/}
+            {/*    <div className="flex">*/}
+            {/*        <img className="flex-3by4"*/}
+            {/*             src={F24_P1}/>*/}
+
+            {/*        <img className="flex-3by4"*/}
+            {/*             src={S24_P2_1}/>*/}
+            {/*        <img className="flex-3by4 "*/}
+            {/*             src={S24_P2_2}/>*/}
+            {/*        <img className="flex-3by4"*/}
+            {/*             src={S24_P2_3}/>*/}
+            {/*        <img className="flex-2by1"*/}
+            {/*             src={F24_P2}/>*/}
+            {/*        <img className="flex-4by3 "*/}
+            {/*             src={F24_P2_1}/>*/}
+            {/*        <img*/}
+            {/*             src={F24_P3}/>*/}
+            {/*        <img className="img"*/}
+            {/*             src={F24_P3_1}/>*/}
+
+            {/*    </div>*/}
+            {/*</div>*/}
+
+            <div id="images-wrapper">
+                <div className="flex">
+                    <img className="flex-3by4"
+                         src={F24_P1}/>
+                    <img className="flex-3by4"
+                         src={S24_P2_1}/>
+                    <img className="flex-3by4 "
+                         src={S24_P2_2}/>
+                    <img className="flex-3by4"
+                         src={S24_P2_3}/>
+                    <img className="flex-2by1"
+                         src={F24_P2}/>
+                    <img className="flex-4by3 "
+                         src={F24_P2_1}/>
+                    <img
+                        src={F24_P3}/>
+                    <img className="img"
+                         src={F24_P3_1}/>
+
                 </div>
             </div>
         </>

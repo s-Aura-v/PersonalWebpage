@@ -128,7 +128,7 @@ export function Projects() {
                 <NavBar/>
                 <br/>
                 <h2>Solo Projects</h2>
-                <div className="projects">
+                <div>
                     <div className="events-container">
                         <div className="proj-cell" onClick={handleYelpOpen}>
                             <img src={YelpRecommendationLogo} alt="YelpLogo" className="proj-logo"/>
