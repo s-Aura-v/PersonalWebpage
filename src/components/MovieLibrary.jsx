@@ -23,16 +23,18 @@ export function MovieLibrary() {
                     header: true,
                     skipEmptyLines: true,
                     complete: (results) => {
-                        // Sort the movies by rating (highest to lowest)
-                        const sortedMovies = results.data.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+                        const sortedMovies = results.data.sort((a, b) => {
+                            const ratingA = parseFloat(a.Rating); // Convert to number
+                            const ratingB = parseFloat(b.Rating); // Convert to number
+                            return ratingB - ratingA; // Sort from highest to lowest
+                        });
                         setMovies(sortedMovies);
-                        console.log(sortedMovies);
-
                         fetchMoviePosters(sortedMovies);
                     },
                 });
             });
     }, []);
+
 
     const fetchMoviePosters = async (movies) => {
         let posters = {};
@@ -62,7 +64,7 @@ export function MovieLibrary() {
             <div className="center">
                 <h2>please wait a few seconds for the movies to load...</h2>
             </div>
-            
+
             <div className="library-grid">
                 {movies.map((movie, index) => (
                     <div className="library-cell-container" key={index}>
