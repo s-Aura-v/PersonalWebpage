@@ -15,7 +15,7 @@ export function Library() {
                 <div className="tabs">
                     <ul className="tabs-list">
                         <li onClick={() => setLibraryState(0)}>ART</li>
-                        <li onClick={() => setLibraryState(1)}>MOVIES</li>
+                        {/*<li onClick={() => setLibraryState(1)}>MOVIES</li>*/}
                         {/*<li onClick={() => setLibraryState(2)}>ANIME</li>*/}
                     </ul>
                 </div>
