@@ -34,9 +34,9 @@
     ]
   },
   {
-    "title": "Parallel Performance Testing\n",
+    "title": "Parallel Performance Testing",
     "description": "Simulate an application in which a set of threads all rely on a shared collection of data, then compare the throughput of the program for 2 parallel data structure",
-    "image": "/assets/1280x720.png",
+    "image": "/assets/project-images/parallelPerformanceLogo.png",
     "tags": [
       "Data Analysis",
       "Read-mostly Server",
@@ -88,19 +88,21 @@
     ]
   },
   {
-    "title": "445",
-    "description": "An group-based uno-like game that entails security consistency, consensus protocols, and is fault tolerant.",
-    "image": "/assets/1280x720.png",
+    "title": "Yelp Recommendation",
+    "description": "A recommendation software that uses concepts of clustering, TF-IDF and Dijkstra's algorithm to find connect between similar businesses.",
+    "image": "/assets/project-images/yelpRecommendationLogo.svg",
     "tags": [
-      "RAFT Protocol",
-      "Security",
-      "Java"
+      "TF-IDF",
+      "K Means Clustering",
+      "Dijkstra's",
+      "Java",
+      "HTML/CSS/JavaScript"
     ],
     "links": [
       {
         "name": "GitHub",
         "icon": "/assets/icons/github.svg",
-        "url": "https://github.com/s-Aura-v/csc445-Project3"
+        "url": "https://github.com/sonephyo/yelp-recommendation-app"
       }
     ]
   }

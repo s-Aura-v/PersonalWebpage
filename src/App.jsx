@@ -6,6 +6,7 @@ import {Worker} from "@react-pdf-viewer/core";
 import React from "react";
 import {Library} from "./pages/library.jsx";
 import {TestingGround} from "./pages/test.jsx";
+import {ProjectsTwo} from "./pages/projects2.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/journal" element={<Library/>} />
                 <Route path="/test" element={<TestingGround />} />
+                <Route path="/test2" element={<ProjectsTwo />} />
             </Routes>
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
             </Worker>

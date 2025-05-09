@@ -1,6 +1,6 @@
 .carousel-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, .25fr));
     gap: 16px;
     width: 100%;
     max-width: 1200px;
@@ -91,4 +91,20 @@
     font-size: 0.8rem;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-grid {
+        display: grid;
+        /*align-items: center;*/
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(350px, .9fr));
+        border: 1px solid black;
+        gap: 16px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
 }

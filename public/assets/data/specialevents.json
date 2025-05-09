@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Quiz Invaders",
+    "description": "A space invaders + quizlet hybrid that helps you memorize bi-relational terms through passive gamified memorization.",
+    "image": "/assets/project-images/quizInvadersLogo.png",
+    "tags": [
+      "HTML/CSS/JavaScript",
+      "No Framework",
+      "Hackathon"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/QuizInvaders"
+      }
+    ]
+  },
+  {
+    "title": "Find your community",
+    "description": "A web app that attempts to find community service activities near you.",
+    "image": "/assets/project-images/findMyCommunityLogo.png",
+    "tags": [
+      "HTML/CSS/JavaScript",
+      "React Framework",
+      "Hackathon"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/FindYourCommunity-hophacks24"
+      }
+    ]
+  }
+]
