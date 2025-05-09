@@ -1,25 +1,27 @@
 [
   {
     "name": "Paint With Text",
-    "description": "You can paint using different methods like letters, one-line, oil, and mondrian.",
+    "description": "Paint using different methods like letters, one-line, oil, and mondrian.",
     "url": "https://paint.toys/",
-    "tags": ""
+    "tags": [
+      "Art"
+    ]
   },
   {
     "name": "???",
-    "description": "You can paint using the brush strokes of other ptainings. Van Gogh's Starry Night was one of the strokes.",
+    "description": "Paint using the brush strokes of other paintings. Van Gogh's Starry Night was one of the strokes.",
     "url": "???",
     "tags": ""
   },
   {
     "name": "x6ud",
-    "description": "You can pose the skull of animals and get reference for the angel they're facing.",
+    "description": "Pose animal skull and get photo reference for the angle they're facing.",
     "url": "https://x6ud.github.io/#/",
     "tags": ""
   },
   {
     "name": "FilmGrab",
-    "description": "You can find screen grabs of film.",
+    "description": "Find screen grabs of film.",
     "url": "https://film-grab.com/",
     "tags": ""
   },
@@ -162,15 +164,15 @@
     "tags":""
   },
   {
-    "name":"",
-    "description":"",
-    "url":"",
+    "name":"Merriam Dictionary",
+    "description":"It's a dictionary, but I enjoy their word of the day section.",
+    "url":"https://www.merriam-webster.com/word-of-the-day",
     "tags":""
   },
   {
-    "name":"",
-    "description":"",
-    "url":"",
+    "name":"Cameron's World",
+    "description":"Archive of the 90s webpages, in the style of a 90s webpage.",
+    "url":"https://www.cameronsworld.net/",
     "tags":""
   },
   {
