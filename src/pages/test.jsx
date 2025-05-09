@@ -1,5 +1,5 @@
 import '../styles/testing-grounds.css'
-import projects from "../../public/assets/projects.json"
+import projects from "../../public/assets/data/projects.json"
 export function TestingGround() {
     return (
         <>

@@ -2,7 +2,7 @@
   {
     "title": "Heat Propagation",
     "description": "Simulating the heating of a metal alloy with three subsections with different thermal characteristics in parallel using a relaxation algorithm.",
-    "image": "../public/assets/project-images/heatPropagationLogo.png",
+    "image": "/assets/project-images/heatPropagationLogo.png",
     "tags": [
       "TCP Socket Communication",
       "Parallel Relaxation",
@@ -11,15 +11,15 @@
     "links": [
       {
         "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/HeatPropagation"
       }
     ]
   },
   {
     "title": "Facility Layout with Genetic Algorithm\n",
     "description": "This program uses the idea of a genetic algorithm to finds the best possible placement for stations on a two dimensional space using concurrency.",
-    "image": "../public/assets/project-images/geneticAlgorithmLogo.png",
+    "image": "/assets/project-images/geneticAlgorithmLogo.png",
     "tags": [
       "Multithreading",
       "JavaFX",
@@ -28,15 +28,15 @@
     "links": [
       {
         "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/GeneticAlgorithm"
       }
     ]
   },
   {
     "title": "Parallel Performance Testing\n",
     "description": "Simulate an application in which a set of threads all rely on a shared collection of data, then compare the throughput of the program for 2 parallel data structure",
-    "image": "../public/assets/1280x720.png",
+    "image": "/assets/1280x720.png",
     "tags": [
       "Data Analysis",
       "Read-mostly Server",
@@ -45,25 +45,17 @@
     "links": [
       {
         "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/ParallelPerformanceMeasurement"
       },
       {
-        "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
-      },
-      {
-        "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
       }
     ]
   },
   {
     "title": "Traffic Measurement through TCP && UDP",
     "description": "Measuring the latency and throughput of the following TCP and UDP based protocols.",
-    "image": "../public/assets/1280x720.png",
+    "image": "/assets/1280x720.png",
     "tags": [
       "Networking",
       "Data Analysis",
@@ -72,8 +64,8 @@
     "links": [
       {
         "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/NetworkCommunication"
       }
     ]
   },
@@ -85,21 +77,20 @@
       "Networking",
       "Sliding Window Protocol",
       "TCP RTO",
-      "Packet Handling",
       "Java"
     ],
     "links": [
       {
         "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/ProxyServer"
       }
     ]
   },
   {
     "title": "445",
     "description": "An group-based uno-like game that entails security consistency, consensus protocols, and is fault tolerant.",
-    "image": "../public/assets/1280x720.png",
+    "image": "/assets/1280x720.png",
     "tags": [
       "RAFT Protocol",
       "Security",
@@ -108,8 +99,8 @@
     "links": [
       {
         "name": "GitHub",
-        "icon": "../public/assets/github.svg",
-        "url": "https://github.com/username/project"
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/csc445-Project3"
       }
     ]
   }

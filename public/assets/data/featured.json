@@ -1,0 +1,19 @@
+[
+  {
+    "title": "445",
+    "description": "An group-based uno-like game that entails security consistency, consensus protocols, and is fault tolerant.",
+    "image": "/assets/1280x720.png",
+    "tags": [
+      "RAFT Protocol",
+      "Security",
+      "Java"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/s-Aura-v/csc445-Project3"
+      }
+    ]
+  }
+]

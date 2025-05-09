@@ -26,6 +26,10 @@
     overflow-wrap: break-word;
 }
 
+.card-image {
+    height: 250px;
+}
+
 .card-title,
 .card-description {
     color: black;

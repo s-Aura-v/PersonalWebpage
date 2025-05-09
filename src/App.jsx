@@ -2,7 +2,6 @@ import './App.css'
 import {Route, Routes} from "react-router-dom";
 import {Home} from "./pages/home.jsx";
 import {Projects} from "./pages/projects.jsx";
-import {Hobbies} from "./pages/hobbies.jsx";
 import {Worker} from "@react-pdf-viewer/core";
 import React from "react";
 import {Library} from "./pages/library.jsx";
@@ -15,7 +14,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
-                <Route path="/hobbies" element={<Hobbies />} />
                 <Route path="/journal" element={<Library/>} />
                 <Route path="/test" element={<TestingGround />} />
             </Routes>

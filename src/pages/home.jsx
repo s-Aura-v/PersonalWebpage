@@ -6,8 +6,6 @@ import GitHubLogo from "../assets/github.svg"
 import LinkedInLogo from "../assets/linkedin.svg"
 import EmailLogo from "../assets/email.svg"
 import React, { useEffect, useRef, useCallback } from "react";
-import { OrbitControls } from 'three/examples/jsm/Addons.js';
-import * as THREE from 'three';
 import {Spotify} from "react-spotify-embed";
 
 export function Home() {
