@@ -5,8 +5,7 @@
     "image": "/assets/project-images/heatPropagationLogo.png",
     "tags": [
       "TCP Socket Communication",
-      "Parallel Relaxation",
-      "Java"
+      "Parallel Relaxation"
     ],
     "links": [
       {
@@ -14,7 +13,8 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/HeatPropagation"
       }
-    ]
+    ],
+    "modal": "heat"
   },
   {
     "title": "Facility Layout with Genetic Algorithm\n",
@@ -22,8 +22,7 @@
     "image": "/assets/project-images/geneticAlgorithmLogo.png",
     "tags": [
       "Multithreading",
-      "JavaFX",
-      "Java"
+      "JavaFX"
     ],
     "links": [
       {
@@ -31,7 +30,26 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/GeneticAlgorithm"
       }
-    ]
+    ],
+    "modal": "genetic"
+  },
+  {
+    "title": "Yelp Recommendation",
+    "description": "A recommendation software that uses concepts of clustering, TF-IDF and Dijkstra's algorithm to find connect between similar businesses.",
+    "image": "/assets/project-images/yelpRecommendationLogo.png",
+    "tags": [
+      "TF-IDF",
+      "K Means Clustering",
+      "Dijkstra's"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "/assets/icons/github.svg",
+        "url": "https://github.com/sonephyo/yelp-recommendation-app"
+      }
+    ],
+    "modal": "yelp"
   },
   {
     "title": "Parallel Performance Testing",
@@ -39,8 +57,7 @@
     "image": "/assets/project-images/parallelPerformanceLogo.png",
     "tags": [
       "Data Analysis",
-      "Read-mostly Server",
-      "Java"
+      "Read-mostly Server"
     ],
     "links": [
       {
@@ -50,16 +67,16 @@
       },
       {
       }
-    ]
+    ],
+    "modal": "performance"
   },
   {
     "title": "Traffic Measurement through TCP && UDP",
     "description": "Measuring the latency and throughput of the following TCP and UDP based protocols.",
-    "image": "/assets/1280x720.png",
+    "image": "assets/project-images/networkCommunicationLogo.png",
     "tags": [
       "Networking",
-      "Data Analysis",
-      "Java"
+      "Data Analysis"
     ],
     "links": [
       {
@@ -67,17 +84,17 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/NetworkCommunication"
       }
-    ]
+    ],
+    "modal": ""
   },
   {
     "title": "Implementation of TCP Protocols",
     "description": "A TCP-based server-client system with sliding window, retransmission timeouts (RTO), XOR encryption, packet loss and reordering emulation, server-side caching, and custom TFIP based packets.",
-    "image": "../public/assets/1280x720.png",
+    "image": "assets/project-images/tcpProtocolsLogo.png",
     "tags": [
       "Networking",
       "Sliding Window Protocol",
-      "TCP RTO",
-      "Java"
+      "TCP RTO"
     ],
     "links": [
       {
@@ -85,25 +102,7 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/ProxyServer"
       }
-    ]
-  },
-  {
-    "title": "Yelp Recommendation",
-    "description": "A recommendation software that uses concepts of clustering, TF-IDF and Dijkstra's algorithm to find connect between similar businesses.",
-    "image": "/assets/project-images/yelpRecommendationLogo.svg",
-    "tags": [
-      "TF-IDF",
-      "K Means Clustering",
-      "Dijkstra's",
-      "Java",
-      "HTML/CSS/JavaScript"
     ],
-    "links": [
-      {
-        "name": "GitHub",
-        "icon": "/assets/icons/github.svg",
-        "url": "https://github.com/sonephyo/yelp-recommendation-app"
-      }
-    ]
+    "modal": ""
   }
 ]

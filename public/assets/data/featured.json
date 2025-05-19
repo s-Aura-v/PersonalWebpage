@@ -5,8 +5,7 @@
     "image": "/assets/1280x720.png",
     "tags": [
       "RAFT Protocol",
-      "Security",
-      "Java"
+      "Security"
     ],
     "links": [
       {
@@ -14,6 +13,7 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/csc445-Project3"
       }
-    ]
+    ],
+    "modal": "yelp"
   }
 ]

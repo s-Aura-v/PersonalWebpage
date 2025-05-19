@@ -14,7 +14,8 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/QuizInvaders"
       }
-    ]
+    ],
+    "modal": ""
   },
   {
     "title": "Find your community",
@@ -31,6 +32,7 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/FindYourCommunity-hophacks24"
       }
-    ]
+    ],
+    "modal": "community"
   }
 ]

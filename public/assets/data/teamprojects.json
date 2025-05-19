@@ -19,11 +19,10 @@
   {
     "title": "Checkmate",
     "description": "CheckMate is a streamlined checklist application for desktop use, accessible via web browser allowing for creation of projects, tasks, and other features.",
-    "image": "/assets/1280x720.png",
+    "image": "assets/project-images/checkmateLogo.webp",
     "tags": [
       "RAFT Protocol",
-      "Security",
-      "Java"
+      "Security"
     ],
     "links": [
       {
@@ -31,12 +30,14 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/csc445-Project3"
       }
-    ]
+    ],
+    "modal": "checkmate"
+
   },
   {
     "title": "Family Thread",
     "description": "A webpage with interactive functions supporting google login, the ability to create and edit family trees, and share family trees with edit and viewing access.",
-    "image": "/assets/1280x720.png",
+    "image": "/assets/project-images/familyThreadLogo.png",
     "tags": [
       "RAFT Protocol",
       "Security",
@@ -48,6 +49,7 @@
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/csc445-Project3"
       }
-    ]
+    ],
+    "modal": "family"
   }
 ]
