@@ -1,4 +1,3 @@
-import '../styles/testing-grounds.css'
 import projects from "../../public/assets/data/projects.json"
 import featured from '../../public/assets/data/featured.json'
 import special from '../../public/assets/data/specialevents.json'

@@ -359,6 +359,317 @@ export function Projects() {
                     </BootstrapDialog>
                 );
 
+            case "network-communication":
+                return (
+                    <BootstrapDialog onClose={() => setActiveModal(null)} open={true} maxWidth='md' fullWidth>
+                        <DialogTitle className="popup-title">Traffic Measurement through TCP && UDP</DialogTitle>
+                        <DialogContent dividers>
+                            <div className="headers-img">
+                                <div className="div1 flex justify-content-center align-items-center">
+                                    <img src={HeatPropagationGIF}/>
+                                </div>
+                            </div>
+                            <div className="tech-demo">
+                                        <span className="mb-10">
+                                            Tech Stack
+                                        </span>
+                                <ul className="techdemo-list">
+                                    <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
+                                    <li>
+                                        <div
+                                            className="display-flex justify-content-center align-items-center">JavaSwing
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <strong>Abstract</strong><br/>
+                                This project investigates how message size and protocol type (TCP vs UDP) affect latency
+                                and throughput
+                                in simple client-server communications. It leverages custom encryption using XOR with
+                                xorshift RNG
+                                and compares network performance across different machine pairs and networks.
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Background</strong><br/>
+                                <ol>
+                                    <li>
+                                        Implement a client-server model where all exchanged messages are encrypted using
+                                        a simple
+                                        XOR scheme with a shared initial 64-bit key and a xorshift-based RNG for
+                                        evolving the key.
+                                    </li>
+                                    <li>
+                                        For TCP, measure round-trip latency (RTT) for messages of sizes: 8, 64, 256, and
+                                        512 bytes.
+                                    </li>
+                                    <li>
+                                        Measure TCP throughput by sending 1 MB of total data using different message
+                                        sizes:
+                                        <ul>
+                                            <li>1024 × 1024-byte messages</li>
+                                            <li>2048 × 512-byte messages</li>
+                                            <li>4096 × 256-byte messages</li>
+                                        </ul>
+                                        Each message must be acknowledged by an 8-byte return value.
+                                    </li>
+                                    <li>
+                                        Repeat both latency and throughput tests using UDP to compare differences in
+                                        reliability,
+                                        speed, and loss.
+                                    </li>
+                                    <li>
+                                        Use at least three machine pairs (e.g., server-to-server, server-to-laptop,
+                                        wired and wireless)
+                                        and perform tests on two different networks (on-campus and off-campus).
+                                    </li>
+                                </ol>
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Purpose</strong><br/>
+                                To compare the performance tradeoffs between TCP and UDP protocols under various message
+                                sizes and
+                                network conditions, with the added complexity of encryption and validation. The results
+                                aim to inform
+                                protocol choice in low-latency and high-throughput scenarios.
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Analysis</strong><br/>
+                                <a
+                                    href="https://htmlpreview.github.io/?https://github.com/s-Aura-v/NetworkCommunication/blob/main/src/main/resources/static/index.html"
+                                    target="_blank">Preview Graphs</a>
+                                <ul>
+                                    <li>
+                                        RTTs grew predictably with message size across all platforms for TCP, but more
+                                        erratically
+                                        for UDP due to packet loss and reordering.
+                                    </li>
+                                    <li>
+                                        TCP throughput scaled better with larger packet sizes due to reduced overhead,
+                                        especially
+                                        when tested on wired connections.
+                                    </li>
+                                    <li>
+                                        UDP performed better in throughput on low-latency networks but suffered on
+                                        wireless or
+                                        congested networks due to lack of retransmission and ACKs.
+                                    </li>
+                                    <li>
+                                        Encryption using xorShift added negligible overhead but provided message
+                                        integrity validation.
+                                    </li>
+                                </ul>
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Core Concepts</strong><br/>
+                                TCP vs UDP Protocols, Network Latency, Throughput Measurement, XOR Encryption,
+                                Pseudorandom Key Generation, Java Sockets, System.nanoTime, Network Variability,
+                                Client-Server Testing
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Lessons Learnt + Failures</strong><br/>
+                                <ul>
+                                    <li>
+                                        Some off-campus testing was inconsistent due to firewall restrictions; future
+                                        tests should
+                                        involve port forwarding or VPNs.
+                                    </li>
+                                    <li>
+                                        UDP tests occasionally failed silently due to dropped packets not being detected
+                                        unless explicitly validated.
+                                    </li>
+                                    <li>
+                                        A better testing framework would automate multiple runs and collect averages and
+                                        standard deviation.
+                                    </li>
+                                    <li>
+                                        Next steps include:
+                                        <ol>
+                                            <li>Introduce packet drop simulation to stress UDP's weaknesses.</li>
+                                            <li>Test with larger files to evaluate long-term throughput stability.</li>
+                                            <li>Add TLS-based encryption as a comparison to XOR to understand
+                                                performance/security tradeoffs.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </DialogContent>
+                    </BootstrapDialog>
+                );
+
+            case "proxy":
+                return (
+                    <BootstrapDialog onClose={() => setActiveModal(null)} open={true} maxWidth='md' fullWidth>
+                        <DialogTitle className="popup-title">Implementation of TCP Protocols</DialogTitle>
+                        <DialogContent dividers>
+                            <div className="headers-img">
+                                <div className="div1 flex justify-content-center align-items-center">
+                                    <img src={HeatPropagationGIF}/>
+                                </div>
+                            </div>
+                            <div className="tech-demo">
+                                        <span className="mb-10">
+                                            Tech Stack
+                                        </span>
+                                <ul className="techdemo-list">
+                                    <li><img src={JavaLogo} className="techdemo-logos" alt="Java"/></li>
+                                    <li>
+                                        <div
+                                            className="display-flex justify-content-center align-items-center">JavaSwing
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <strong>Abstract</strong><br/>
+                                This project implements a proxy server that relays and caches web content using a
+                                modified TFTP-inspired protocol.
+                                It supports secure transmission with encryption, TCP-style sliding window reliability,
+                                retransmission strategies,
+                                and optional packet drops to simulate network unreliability. The system includes a
+                                custom client, proxy, and backend
+                                server to test functionality under varied network conditions.
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Background</strong><br/>
+                                <ol>
+                                    <li>
+                                        Create a proxy server that listens for client connections, accepts a requested
+                                        URL, and fetches the
+                                        corresponding file or image via HTTP.
+                                    </li>
+                                    <li>
+                                        The proxy caches the most recent result, sending cached data immediately if the
+                                        request matches the cache.
+                                    </li>
+                                    <li>
+                                        The proxy forwards the page or image file to the client, which then displays the
+                                        content (images only required).
+                                    </li>
+                                    <li>
+                                        Extend the basic idea of TFTP (RFC 1350) using the TFTP Options Extension (RFC
+                                        2347), but modify it:
+                                        <ul>
+                                            <li>Use TCP-style sliding window with ACKs</li>
+                                            <li>Implement TCP-style retransmission timeout (RTO)</li>
+                                            <li>Use encrypted transmission with XOR or similar randomization</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Only binary (octet) transfer is supported.
+                                    </li>
+                                    <li>
+                                        Introduce a simulated 1% packet drop via command-line argument.
+                                    </li>
+                                    <li>
+                                        Store all received files in a temporary directory (e.g., `/tmp`) and validate
+                                        contents using byte-by-byte
+                                        comparison (`cmp`).
+                                    </li>
+                                </ol>
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Purpose</strong><br/>
+                                To explore enhancements to the TFTP protocol using modern reliability strategies such as
+                                TCP-style sliding windows,
+                                encryption, caching, and retransmission logic. This simulates a more robust file
+                                transfer scenario under controlled
+                                and unreliable network conditions.
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Analysis</strong><br/>
+                                [Insert link to HTML preview page with graphs here: <a
+                                href="https://htmlpreview.github.io/?https://github.com/s-Aura-v/ProxyServer/blob/main/src/main/resources/data/index.html" target="_blank">Preview Graphs</a>]
+                                <ul>
+                                    <li>
+                                        Sliding window transmission significantly improved throughput for window sizes less than 1, especially in high latency
+                                        environments.
+                                    </li>
+                                    <li>
+                                        With 1% packet drop enabled, smaller window sizes suffered from frequent
+                                        retransmissions, leading to poor performance.
+                                    </li>
+                                    <li>
+                                        The XOR-based encryption was effective and lightweight, with minimal impact on
+                                        throughput.
+                                    </li>
+                                    <li>
+                                        Caching improved repeat-request performance dramatically (~10× faster when cache
+                                        hit).
+                                    </li>
+                                    <li>
+                                        Validation using `cmp` ensured file correctness, especially under simulated drop
+                                        conditions.
+                                    </li>
+                                </ul>
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Core Concepts</strong><br/>
+                                Proxy Server Design, HTTP Relaying, Caching, Sliding Window Protocol, TCP-style
+                                Retransmissions, XOR Encryption,
+                                Packet Loss Simulation, File Validation, TFTP Extensions, Binary Transmission, Temporary
+                                File Handling
+                                <br/><br/>
+                            </div>
+
+                            <div>
+                                <strong>Lessons Learnt + Failures</strong><br/>
+                                <ul>
+                                    <li>
+                                        Early versions failed to resend packets correctly when using large window sizes
+                                        without proper ACK tracking.
+                                    </li>
+                                    <li>
+                                        Simulated packet drops weren't initially affecting retransmission logic until
+                                        RTO logic was integrated properly.
+                                    </li>
+                                    <li>
+                                        Cache comparison only worked for identical URLs; it was later updated to
+                                        normalize input (e.g., URL trimming).
+                                    </li>
+                                    <li>
+                                        Next Steps:
+                                        <ol>
+                                            <li>Compare XOR encryption with a lightweight stream cipher (e.g.,
+                                                ChaCha20)
+                                            </li>
+                                            <li>Visualize cache hit/miss ratios in the performance dashboard</li>
+                                            <li>Test with additional content types beyond images (e.g., HTML, JSON)</li>
+                                            <li>Benchmark against actual TFTP and TCP implementations for further
+                                                protocol insights
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </DialogContent>
+                    </BootstrapDialog>
+                );
+
             case "family":
                 return (
                     <BootstrapDialog onClose={() => setActiveModal(null)} open={true} maxWidth='md' fullWidth>

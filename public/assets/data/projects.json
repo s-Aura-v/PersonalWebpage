@@ -64,8 +64,6 @@
         "name": "GitHub",
         "icon": "/assets/icons/github.svg",
         "url": "https://github.com/s-Aura-v/ParallelPerformanceMeasurement"
-      },
-      {
       }
     ],
     "modal": "performance"
@@ -85,7 +83,7 @@
         "url": "https://github.com/s-Aura-v/NetworkCommunication"
       }
     ],
-    "modal": ""
+    "modal": "network-communication"
   },
   {
     "title": "Implementation of TCP Protocols",
@@ -103,6 +101,6 @@
         "url": "https://github.com/s-Aura-v/ProxyServer"
       }
     ],
-    "modal": ""
+    "modal": "proxy"
   }
 ]
