@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color:white;
+    padding: .5em;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 1em;
+}
+
+.social-links > a > img {
+    width: 50px;
+}
+
+.social-links > a > img:hover {
+
+}
+
+
