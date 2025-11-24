@@ -19,6 +19,9 @@
         <slot />
     </div>
     <Footer />
+    <div>
+        test
+    </div>
 
 </div>
 
