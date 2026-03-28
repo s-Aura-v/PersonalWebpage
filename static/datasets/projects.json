@@ -1,5 +1,22 @@
 [
   {
+    "title": "Daedalus",
+    "description": "A java app that will parallelize path finding apps and compare its performance with its sequential counterpart.",
+    "image": "/images/projects/daedalus.png",
+    "tags": [
+      "Parallel Computing",
+      "Pathfinding Algorithm"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "images/icons/github-svgrepo-com.svg",
+        "url": "https://github.com/s-Aura-v/Daedalus"
+      }
+    ],
+    "modal": "daedalus"
+  },
+  {
     "title": "Heat Propagation",
     "description": "Simulating the heating of a metal alloy with three subsections with different thermal characteristics in parallel using a relaxation algorithm.",
     "image": "/images/projects/heat-prop.png",

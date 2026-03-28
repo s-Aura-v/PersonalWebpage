@@ -1,5 +1,5 @@
 <script>
-    import '../app.css'
+    import '../styles/app.css'
     import Header from "../components/Header.svelte";
     import Footer from "../components/Footer.svelte";
 
@@ -14,15 +14,12 @@
 </script>
 
 <div class="webpage-container">
-    <Header />
+    <Header/>
     <div class="content">
-        <slot />
+        <slot/>
     </div>
-    <Footer />
-    <div>
-        test
-    </div>
+    <Footer/>
 
 </div>
 
-<svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
+<svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth/>
