@@ -1,6 +1,7 @@
 :root {
     --primary-bg-color: #000000;
     --primary-text-color: #ffffff;
+    color: var(--primary-text-color);
     overflow: hidden;
 }
 
@@ -9,27 +10,79 @@
     height: 100vh;
     background-color: var(--primary-bg-color);
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
-#page img {
+/*Makes both bg and content layer exist in the same grid cell*/
+.bg-image,
+.content-layer {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.bg-image {
     width: 90%;
     height: 90%;
+    justify-self: center;
+    align-self: center;
+    z-index: 1; /** bottom layer **/
+}
+
+.bg-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     filter: contrast(1.2) brightness(1.1) saturate(1.1);
 }
 
-.title {
-    position: fixed;
-    top:50%; left: 50%;
-    color: var(--primary-text-color);
+
+.content-layer {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 20vh;
+    pointer-events: none;
 }
 
-/*.mask1 {*/
-/*    -webkit-mask-image: url('./assets/page/maskdemo.png');*/
-/*    mask-image: url('./assets/page/maskdemo.png');*/
-/*    mask-repeat: no-repeat;*/
-/*    mask-position: center;*/
-/*}*/
+/* Barrier to center image */
+.spacer {
+    height: 20vh;
+    visibility: hidden;
+}
+
+.title {
+    color: var(--primary-text-color);
+    pointer-events: auto;
+    margin: 0;
+}
+
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 10rem;
+}
+
+.nav-bar li {
+    pointer-events: auto;
+    color: var(--primary-text-color);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 2em;
+    transition: opacity 0.2s ease;
+}
+
+.nav-bar li:hover {
+    opacity: 0.7;
+}
