@@ -6,37 +6,53 @@
     import TV from './assets/page/staticTV.jpg'
     import Landscape from './assets/page/landscape.jpg'
     import './app.css'
+    import Projects from "./lib/Projects.svelte";
+    import Home from "./lib/Home.svelte";
+    import Gallery from "./lib/Gallery.svelte";
+
+
+    // Set the initial view to your Home component
+    let currentView = Home;
+
+    function tvWarp(node, {duration = 400}) {
+        return {
+            duration,
+            css: (t) => {
+                const scaleY = Math.max(0, (t - 0.2) / 0.8);
+                const scaleX = t > 0.2 ? 1 : t / 0.2;
+                const brightness = t < 0.5 ? 2 - (t * 2) : 1;
+
+                return `
+                    transform: scaleX(${scaleX}) scaleY(${scaleY});
+                    filter: brightness(${brightness}) contrast(${t * 1.5});
+                    opacity: ${t > 0.1 ? 1 : 0};
+                `;
+            }
+        };
+    }
 </script>
 
-<!--<section id="page">-->
-<!--    <img src={TV} class="mask1"/>-->
-<!--    <div class="info">-->
-<!--        <h2 class="title">s-aura-v</h2>-->
-<!--    </div>-->
-
-
-
-<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
-<!--</section>-->
-
 <section id="page" class="parent">
-    <!-- TV Background Layer -->
     <div class="bg-image">
         <enhanced:img src={TV} alt="tv-screen"/>
     </div>
 
-    <!-- Any content above the background -->
     <div class="content-layer">
-        <!-- Empty spacer pushing the title down slightly if needed, or keeping it centered -->
         <div class="spacer"></div>
 
-        <h1 class="title">s-aura-v</h1>
+        <div class="main-content">
+            {#key currentView}
+                <div transition:tvWarp={{ duration: 300 }} class="tv-effect-wrapper">
+                    <svelte:component this={currentView}/>
+                </div>
+            {/key}
+        </div>
 
         <div class="nav-bar">
             <ul>
-                <li>Projects</li>
-                <li>Gallery</li>
-                <li>Misc</li>
+                <button class="nav-btn" on:click={() => currentView = Projects}>Projects</button>
+                <button class="nav-btn" on:click={() => currentView = Gallery}>Gallery</button>
+                <button class="nav-btn" on:click={() => currentView = Home}>Misc</button>
             </ul>
         </div>
     </div>
