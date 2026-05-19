@@ -1,6 +1,8 @@
 :root {
     --primary-bg-color: #000000;
     --primary-text-color: #ffffff;
+    --primary-highlight-color: #7CFC00FF;
+    --primary-highlight-shadow: #7CFC004C;
     color: var(--primary-text-color);
     overflow: hidden;
 }
@@ -33,7 +35,7 @@
 
 .bg-image img {
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: cover;
     filter: contrast(1.2) brightness(1.1) saturate(1.1);
 }

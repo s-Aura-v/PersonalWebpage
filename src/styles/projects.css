@@ -1,0 +1,135 @@
+.carousel-viewport {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-track {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 150px);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    height: 300px;
+}
+
+.project-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.vhs-tape {
+    width: 240px;
+    height: 140px;
+    background: #111;
+    border: 3px solid #333;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    margin-bottom: 12px;
+}
+
+.project-card.active {
+    transform: scale(1.25);
+    opacity: 1;
+    z-index: 10;
+}
+
+.project-card.active .vhs-tape {
+    border-color: var(--primary-highlight-color);
+    box-shadow: 0 0 20px var(--primary-highlight-shadow);
+}
+
+/* Side unselected items */
+.project-card.inactive {
+    transform: scale(0.85); /* Shrinks smaller onto the sides */
+    opacity: 0.4; /* Fades out slightly into the background background */
+}
+
+/* Styling for titles and buttons */
+.project-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tape-number {
+    font-family: monospace;
+    color: #555;
+}
+
+/* Retro Buttons Layout */
+.carousel-controls {
+    margin-top: auto;
+    display: flex;
+    gap: 2rem;
+    z-index: 11;
+}
+
+.control-btn {
+    background: #222;
+    border: 2px solid var(--primary-text-color);
+    color: var(--primary-text-color);
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.control-btn:hover:not(:disabled) {
+    background: var(--primary-highlight-color);
+    color: black;
+}
+
+.control-btn:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.tape-tags-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 240px;
+    box-sizing: border-box;
+    transition: transform 0.4s ease;
+}
+
+.tape-tag {
+    background: rgba(34, 34, 34, 0.8);
+    color: #aaa;
+    border: 1px solid #333;
+    font-family: monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.4s ease;
+}
+
+.project-card.active .tape-tag {
+    color: var(--primary-highlight-color);
+    border-color: var(--primary-highlight-shadow);
+    background: rgba(0, 0, 0, 0.5);
+}
