@@ -3,6 +3,7 @@
     import viteLogo from './assets/vite.svg'
     import heroImg from './assets/hero.png'
     import Counter from './lib/Counter.svelte'
+    // import TV from './assets/page/aFireInTheWoods.jpg'
     import TV from './assets/page/staticTV.jpg'
     import Landscape from './assets/page/landscape.jpg'
     import './app.css'
@@ -10,8 +11,6 @@
     import Home from "./lib/Home.svelte";
     import Gallery from "./lib/Gallery.svelte";
 
-
-    // Set the initial view to your Home component
     let currentView = Home;
 
     function tvWarp(node, {duration = 400}) {

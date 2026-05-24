@@ -5,7 +5,7 @@
     "image": "/projects/traffic-measure.png",
     "tags": [
       "Parallel Computing",
-      "Pathfinding Algorithm"
+      "Pathfinding"
     ],
     "links": [
       {
@@ -21,8 +21,8 @@
     "description": "Simulating the heating of a metal alloy with three subsections with different thermal characteristics in parallel using a relaxation algorithm.",
     "image": "/projects/heat-prop.png",
     "tags": [
-      "TCP Socket Communication",
-      "Parallel Relaxation"
+      "TCP Socket",
+      "Parallel Computing"
     ],
     "links": [
       {
@@ -38,7 +38,8 @@
     "description": "This program uses the idea of a genetic algorithm to finds the best possible placement for stations on a two dimensional space using concurrency.",
     "image": "/projects/gen-algo.png",
     "tags": [
-      "Multithreading"
+      "Parallel Computing",
+      "Genetic Algo"
     ],
     "links": [
       {
@@ -56,7 +57,7 @@
     "tags": [
       "TF-IDF",
       "K Means Clustering",
-      "Dijkstra's"
+      "Pathfinding"
     ],
     "links": [
       {
@@ -90,7 +91,7 @@
     "image": "projects/traffic-measure.png",
     "tags": [
       "Networking",
-      "Sliding Window Protocol",
+      "Sliding Window",
       "TCP RTO"
     ],
     "links": [
