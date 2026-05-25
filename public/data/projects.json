@@ -1,0 +1,121 @@
+[
+  {
+    "title": "Daedalus",
+    "description": "A java app that will parallelize path finding apps and compare its performance with its sequential counterpart.",
+    "image": "/projects/traffic-measure.png",
+    "tags": [
+      "Parallel Computing",
+      "Pathfinding"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "images/icons/github-svgrepo-com.svg",
+        "url": "https://github.com/s-Aura-v/Daedalus"
+      }
+    ],
+    "modal": "daedalus"
+  },
+  {
+    "title": "Heat Propagation",
+    "description": "Simulating the heating of a metal alloy with three subsections with different thermal characteristics in parallel using a relaxation algorithm.",
+    "image": "/projects/heat-prop.png",
+    "tags": [
+      "TCP Socket",
+      "Parallel Computing"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "images/icons/github-svgrepo-com.svg",
+        "url": "https://github.com/s-Aura-v/HeatPropagation"
+      }
+    ],
+    "modal": "heat"
+  },
+  {
+    "title": "Facility Layout with Genetic Algorithm\n",
+    "description": "This program uses the idea of a genetic algorithm to finds the best possible placement for stations on a two dimensional space using concurrency.",
+    "image": "/projects/gen-algo.png",
+    "tags": [
+      "Parallel Computing",
+      "Genetic Algo"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "images/icons/github-svgrepo-com.svg",
+        "url": "https://github.com/s-Aura-v/GeneticAlgorithm"
+      }
+    ],
+    "modal": "genetic"
+  },
+  {
+    "title": "Yelp Recommendation",
+    "description": "A recommendation software that uses concepts of clustering, TF-IDF and Dijkstra's algorithm to find connect between similar businesses.",
+    "image": "/projects/yelp-recom.png",
+    "tags": [
+      "TF-IDF",
+      "K Means Clustering",
+      "Pathfinding"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "images/icons/github-svgrepo-com.svg",
+        "url": "https://github.com/sonephyo/yelp-recommendation-app"
+      }
+    ],
+    "modal": "yelp"
+  },
+  {
+    "title": "Parallel Performance Testing",
+    "description": "Simulate an application in which a set of threads all rely on a shared collection of data, then compare the throughput of the program for 2 parallel data structure",
+    "image": "/projects/parallel-perform.png",
+    "tags": [
+      "Data Analysis",
+      "Read-mostly Server"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "images/icons/github-svgrepo-com.svg",
+        "url": "https://github.com/s-Aura-v/ParallelPerformanceMeasurement"
+      }
+    ],
+    "modal": "performance"
+  },
+  {
+    "title": "Implementation of TCP Protocols",
+    "description": "A TCP-based server-client system with sliding window, retransmission timeouts (RTO), XOR encryption, packet loss and reordering emulation, server-side caching, and custom TFIP based packets.",
+    "image": "projects/traffic-measure.png",
+    "tags": [
+      "Networking",
+      "Sliding Window",
+      "TCP RTO"
+    ],
+    "links": [
+      {
+        "name": "GitHub",
+        "icon": "images/icons/github-svgrepo-com.svg",
+        "url": "https://github.com/s-Aura-v/ProxyServer"
+      }
+    ],
+    "modal": "proxy"
+  },
+  {
+    "title": "Home Server",
+    "description": "A Linux (debian) server used as a personal server for Git, Data.",
+    "image:": "",
+    "tags:": [
+      "Unix",
+      "CI/CD Pipeline",
+      "Networking"
+    ],
+    "links": [
+      {
+      }
+    ],
+    "modal": "unix"
+  }
+]
