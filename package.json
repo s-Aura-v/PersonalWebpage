@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@sveltejs/adapter-cloudflare": "^7.2.8",
     "@sveltejs/enhanced-img": "^0.10.4",
     "@sveltejs/vite-plugin-svelte": "^7.1.2",
     "svelte": "^5.55.5",
