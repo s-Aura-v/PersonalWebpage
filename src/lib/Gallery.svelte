@@ -26,14 +26,25 @@
         selectedArt = art;
     }
 
-    function closeLightbox(event) {
-        // if (event.key === 'Escape') {
+    function closeLightbox() {
         selectedArt = null;
-        // }
+    }
+
+    function handleKeyDown(event) {
+        if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
+            closeLightbox();
+        }
+    }
+
+    function getYouTubeEmbedUrl(url) {
+        if (!url) return '';
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11)
+            ? `https://www.youtube.com/embed/${match[2]}`
+            : url;
     }
 </script>
-
-<!--<svelte:window on:keydown={closeLightbox}/>-->
 
 <div class="gallery-container">
     <aside class="rom-list-sidebar">
@@ -55,15 +66,16 @@
         {#if filteredArtworks.length > 0}
             <div class="artwork-matrix-grid">
                 {#each filteredArtworks as art}
-                    <div class="art-cartridge" on:click={() => openLightbox(art)} style="cursor: pointer;">
+                    <div
+                            class="art-cartridge"
+                            on:click={() => openLightbox(art)}
+                            on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && openLightbox(art)}
+                            role="button"
+                            tabindex="0"
+                            style="cursor: pointer;"
+                    >
                         <div class="art-preview-frame">
-                            {#if art['file-name'].toLowerCase().endsWith('.pdf')}
-                                <div class="pdf-placeholder">
-                                    <span class="pdf-icon">📄</span>
-                                    <span class="pdf-text">PDF_DATA.</span>
-                                    <span class="pdf-text">CLICK TO OPEN.</span>
-                                </div>
-                            {:else if art['file-name'].toLowerCase().endsWith('mp4')}
+                            {#if art['file-name'].toLowerCase().endsWith('.mp4')}
                                 <video
                                         src={`/art/${art['file-name']}`}
                                         autoplay
@@ -101,22 +113,22 @@
 </div>
 
 {#if selectedArt}
-    <div class="lightbox-overlay" on:click={closeLightbox}>
-        <div class="lightbox-content" on:click|stopPropagation>
+    <div
+            class="lightbox-overlay"
+            on:click={closeLightbox}
+            on:keydown={handleKeyDown}
+            role="button"
+            tabindex="0"
+    >
+        <div class="lightbox-content" on:click|stopPropagation role="presentation">
             <div class="lightbox-header">
                 <span>VIEW_FILE: {selectedArt['file-name']}</span>
                 <button class="lightbox-close-btn" on:click={closeLightbox}>[ ESC_X ]</button>
             </div>
             <div class="lightbox-body">
-                {#if selectedArt['file-name'].toLowerCase().endsWith('.pdf')}
+                {#if selectedArt['file-name'].toLowerCase().endsWith('.mp4')}
                     <iframe
-                            src={`/art/${selectedArt['file-name']}#toolbar=0`}
-                            title={selectedArt.title}
-                            class="lightbox-pdf"
-                    ></iframe>
-                {:else if selectedArt['file-name'].toLowerCase().endsWith('.mp4')}
-                    <iframe
-                            src={(selectedArt['alt'])}
+                            src={getYouTubeEmbedUrl(selectedArt['alt'])}
                             title={selectedArt.title}
                             frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

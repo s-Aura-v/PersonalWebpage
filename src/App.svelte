@@ -36,9 +36,9 @@
         <div class="main-content">
             {#key currentView}
                 <div transition:tvWarp={{ duration: 300 }} class="tv-effect-wrapper">
-                    <svelte:component this={currentView}/>
+                    <svelte:component this={currentView}> </svelte:component>
                 </div>
-                <div class="scanline-overlay"/>
+                <div class="scanline-overlay"> </div>
             {/key}
         </div>
 
@@ -51,7 +51,6 @@
         </div>
     </div>
 </section>
-
 
 <!--look into svg displacement map for cool animation ideas...-->
 <!--https://www.smashingmagazine.com/2021/09/deep-dive-wonderful-world-svg-displacement-filtering/-->
