@@ -102,5 +102,20 @@
       }
     ],
     "modal": "proxy"
+  },
+  {
+    "title": "Home Server",
+    "description": "A Linux (debian) server used as a personal server for Git, Data.",
+    "image:": "",
+    "tags:": [
+      "Unix",
+      "CI/CD Pipeline",
+      "Networking"
+    ],
+    "links": [
+      {
+      }
+    ],
+    "modal": "unix"
   }
 ]

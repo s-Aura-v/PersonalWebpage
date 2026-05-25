@@ -35,3 +35,8 @@ OUTPUT_FILE = "artworks.json"
 
 if __name__ == "__main__":
     generate_image_json(TARGET_DIR, OUTPUT_FILE)
+
+
+## Future Changes:
+## Maybe add a png equivalent of pdf, just for the preview.
+## Label it as [fileNAME]_preview.png, so that we can say if pdf, then show png, but when clicking on the png, show pdf.

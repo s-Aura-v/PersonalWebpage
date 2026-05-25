@@ -1,3 +1,3 @@
-<div class="title">
-    s-aura-v
+<div class="title" style="font-size: 300px">
+    s-Aura-v
 </div>

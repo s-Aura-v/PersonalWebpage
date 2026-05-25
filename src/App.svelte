@@ -1,11 +1,5 @@
 <script>
-    import svelteLogo from './assets/svelte.svg'
-    import viteLogo from './assets/vite.svg'
-    import heroImg from './assets/hero.png'
-    import Counter from './lib/Counter.svelte'
-    // import TV from './assets/page/aFireInTheWoods.jpg'
-    import TV from './assets/page/staticTV.jpg'
-    import Landscape from './assets/page/landscape.jpg'
+    import TV from './assets/page/bg4.gif'
     import './app.css'
     import Projects from "./lib/Projects.svelte";
     import Home from "./lib/Home.svelte";
@@ -44,6 +38,7 @@
                 <div transition:tvWarp={{ duration: 300 }} class="tv-effect-wrapper">
                     <svelte:component this={currentView}/>
                 </div>
+                <div class="scanline-overlay"/>
             {/key}
         </div>
 
